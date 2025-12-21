@@ -113,13 +113,23 @@ where:
 ### Implementation Architecture
 
 Input Parameters
+
 ↓
+
 Causal Network Generation
+
 ↓
+
 Quantum Dynamics (Metropolis)
+
 ↓
+
 Observable Calculation
+
 ↓
+
 Continuum Limit Extraction
+
 ↓
+
 Physical Predictions
