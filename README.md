@@ -378,3 +378,63 @@ pip install -r src/requirements.txt
 
 # Run quick test
 python src/run_experiment.py --test
+
+🚀 Quick Start
+python
+from src.act_model import ACTModel
+from src.act_dark_matter import analyze_dark_matter
+
+# Create ACT model
+model = ACTModel(N=1000, temperature=0.7)
+
+# Thermalize
+model.thermalize(steps=500)
+
+# Compute emergent constants
+constants = model.compute_constants()
+print(f"α = {constants['alpha']:.12f}")
+
+# Analyze dark matter
+dm_results = analyze_dark_matter(model)
+📖 Documentation
+Complete documentation is available in the docs/ directory:
+
+Document	Description
+01_Overview.md	Theory overview and motivation
+02_Mathematical_Foundations.md	Mathematical framework
+03_Fundamental_Constants.md	Derivation of constants
+04_Emergent_SM.md	Emergent Standard Model
+05_Quantum_Gravity.md	Quantum gravity effects
+06_Cosmology.md	Cosmological predictions
+07_Experimental_Tests.md	Experimental tests
+08_Philosophical_Implications.md	Philosophical implications
+09_Applied_Technologies.md	Potential applications
+10_Dark_Matter_Extension.md	Dark matter extension
+📊 Notebooks
+Interactive Jupyter notebooks:
+
+Notebook	Description
+01_ACT_Basics.ipynb	Basic ACT simulations
+02_Dark_Matter_ACT.ipynb	Dark matter analysis
+03_Cosmology_ACT.ipynb	Cosmological simulations
+🤝 Contributing
+We welcome contributions! Please see:
+
+Contributing Guidelines
+
+Code of Conduct
+
+Development Workflow
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📞 Contact
+Maintainer: Your Name
+
+Email: your.email@example.com
+
+Discussions: GitHub Discussions
+
+Issues: GitHub Issues
+
