@@ -1,4 +1,4 @@
-**Файл:** `ACT---Theory/docs/01_Overview.md`
+
 
 ```markdown
 # Algebraic Causality Theory (ACT): Overview
