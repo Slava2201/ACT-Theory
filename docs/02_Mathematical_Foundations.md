@@ -1,402 +1,320 @@
 # 02. Mathematical Foundations of Algebraic Causality Theory
 
-## 📐 Core Mathematical Structures
+# Mathematical Foundations of ACT Theory
 
-### 1. **Causal Set Axioms**
+## Table of Contents
 
-**Definition 1.1 (Causal Set):** A causal set \((C, \prec)\) is a locally finite partially ordered set:
-1. **Anti-symmetry:** \(x \prec y\) and \(y \prec x \implies x = y\)
-2. **Transitivity:** \(x \prec y\) and \(y \prec z \implies x \prec z\)
-3. **Local Finiteness:** \(\forall x,z \in C, |\{y \in C : x \prec y \prec z\}| < \infty\)
+1. [Causal Set Theory](#1-causal-set-theory)
+2. [Regge Calculus](#2-regge-calculus)
+3. [Dirac Operator on Causal Sets](#3-dirac-operator-on-causal-sets)
+4. [Geometric Quantization](#4-geometric-quantization)
+5. [Group Theory and Symmetries](#5-group-theory-and-symmetries)
+6. [Topological Invariants](#6-topological-invariants)
 
-**Physically:** Each element \(x \in C\) represents a Planck-scale "event," and \(x \prec y\) means "\(x\) can influence \(y\)."
+## 1. Causal Set Theory
 
----
+### 1.1 Basic Definitions
 
-### 2. **Algebraic Structure on Causal Sets**
+A **causal set** $\mathcal{C}$ is a locally finite partially ordered set:
 
-**Definition 2.1 (Operator Algebra):** To each element \(x \in C\), we associate an algebraic object \(A_x\):
-\[
-A_x \in \mathcal{A} \quad \text{where } \mathcal{A} \text{ is a } C^*\text{-algebra}
-\]
+$$
+\mathcal{C} = (P, \prec)
+$$
 
-**Concrete Implementation in ACT:**
-```python
-class CausalElement:
-    def __init__(self, position, causal_past=None):
-        self.position = position  # Coordinates in embedding space
-        self.operator = generate_SU4_operator()  # U ∈ SU(4)
-        self.causal_past = causal_past or []  # Elements that precede this one
-        self.causal_future = []  # Elements that follow this one
-        
-    def precedes(self, other):
-        """Check if this element causally precedes another"""
-        # Must satisfy: t_self < t_other and within light cone
-        dt = other.position[0] - self.position[0]
-        dx = np.linalg.norm(other.position[1:] - self.position[1:])
-        return dt > 0 and dx < self.c * dt
-```
+where:
+- $P$ is a set of elements (events)
+- $\prec$ is a partial order representing causal precedence
+- **Local finiteness**: $\forall x,y \in P$, the set $\{z \in P \mid x \prec z \prec y\}$ is finite
 
----
+### 1.2 Causal Interval
 
-### 3. **Causal Intervals and Geometry**
+The number of elements in the causal interval between $x$ and $y$:
 
-**Definition 3.1 (Causal Interval):** For \(x \prec z\), the causal interval (Alexandrov set) is:
-\[
-I(x,z) = \{y \in C : x \prec y \prec z\}
-\]
+$$
+N(x,y) = |\{z \in P \mid x \prec z \prec y\}|
+$$
 
-**Theorem 3.2 (Emergent Metric):** In the continuum limit, the number of elements in causal intervals determines the metric:
-\[
-V(I(x,z)) \sim \frac{\pi}{24} \tau(x,z)^4 + \text{higher order}
-\]
-where \(\tau(x,z)\) is the proper time between \(x\) and \(z\).
+This provides a measure of **proper time**.
 
-**Proof Sketch:** For Minkowski space with density \(\rho\), the expected number of points in a causal interval of volume \(V\) is Poisson with mean \(\rho V\). For a causal set that is a Poisson sprinkling into a Lorentzian manifold, the correspondence is established.
+### 1.3 Sprinkling Process
 
----
+To obtain a causal set from a Lorentzian manifold $(M,g)$:
 
-### 4. **Dirac Operator on Causal Sets**
+1. **Poisson sprinkling**: Randomly select points with density $\rho$
+2. **Induce causal relations**: $x \prec y$ iff $y$ is in the future light cone of $x$
 
-**Definition 4.1 (Causal Dirac Operator):** The discrete Dirac operator \(D\) acts on spinors \(\psi_x\) associated to each element:
-\[
+The expected number of points in a volume $V$ is:
+
+$$
+\mathbb{E}[N] = \rho V
+$$
+
+with $\rho \sim \ell_P^{-4}$ at the Planck scale.
+
+## 2. Regge Calculus
+
+### 2.1 Simplicial Decomposition
+
+Spacetime is approximated by a **simplicial complex**:
+
+$$
+\mathcal{M} \approx \bigcup_i \sigma_i^{(n)}
+$$
+
+where $\sigma_i^{(n)}$ are $n$-simplices (triangles, tetrahedra, etc.).
+
+### 2.2 Regge Action
+
+For a 4D simplicial complex:
+
+$$
+S_{\text{Regge}} = \frac{1}{8\pi G} \sum_{\text{hinges } h} A_h \delta_h - \Lambda \sum_{\text{simplices } s} V_s
+$$
+
+where:
+- $A_h$ = area of hinge (2-simplex)
+- $\delta_h$ = deficit angle at hinge
+- $V_s$ = volume of 4-simplex
+- $\Lambda$ = cosmological constant
+
+### 2.3 Deficit Angle
+
+The deficit angle $\delta_h$ measures curvature:
+
+$$
+\delta_h = 2\pi - \sum_{s \supset h} \theta_{h,s}
+$$
+
+where $\theta_{h,s}$ is the dihedral angle of simplex $s$ at hinge $h$.
+
+## 3. Dirac Operator on Causal Sets
+
+### 3.1 Definition
+
+**Definition 3.1 (Causal Dirac Operator):**
+The discrete Dirac operator $D$ acts on spinors $\psi_x$ associated to each element:
+
+$$
 (D\psi)_x = \sum_{y \prec x \text{ or } x \prec y} \kappa(x,y) \psi_y
-\]
-where \(\kappa(x,y)\) is a kernel encoding causal relations and distances.
+$$
 
-**Matrix Representation:**
-\[
-D_{xy} = \begin{cases}
-\frac{i}{l_p} C(x,y) & \text{if } x \prec y \text{ or } y \prec x \\
+where $\kappa(x,y)$ is a kernel encoding causal relations and distances.
+
+### 3.2 Matrix Representation
+
+In matrix form:
+
+$$
+D_{xy} = 
+\begin{cases} 
+\dfrac{i}{\ell_P} C(x,y) & \text{if } x \prec y \text{ or } y \prec x \\ 
 0 & \text{otherwise}
 \end{cases}
-\]
-with \(C(x,y)\) encoding the causal structure.
+$$
 
----
+with $C(x,y)$ encoding the causal structure:
 
-### 5. **Action Principle for ACT**
+$$
+C(x,y) = \frac{1}{\sqrt{N(x,y)}} e^{i\phi(x,y)}
+$$
 
-**Definition 5.1 (Benincasa-Dowker Action):** For a causal set \(C\), the discrete action is:
-\[
-S_{\text{BD}}[C] = \frac{\hbar}{l_p^2} \left( N - 2\lambda \sum_{x \prec y} N(x,y) + \lambda^2 \sum_{x \prec y \prec z} N(x,y,z) \right)
-\]
-where \(N\) is total elements, and \(\lambda\) is related to the cosmological constant.
+where $\phi(x,y)$ is a phase factor.
 
-**ACT Extension:** We add algebraic terms:
-\[
-S_{\text{ACT}} = S_{\text{BD}} + S_{\text{algebraic}} + S_{\text{topological}}
-\]
-where
-\[
-S_{\text{algebraic}} = \sum_{x \prec y} \text{Tr}\left( U_x^\dagger U_y \right) \quad \text{and} \quad U_x \in SU(4)
-\]
+### 3.3 Spectrum and Dimension
 
----
+The spectral dimension $d_s$ is obtained from the return probability:
 
-## 🧮 Mathematical Derivation of Emergent Physics
+$$
+P(t) = \text{Tr}(e^{-tD^2}) \sim t^{-d_s/2} \quad \text{as } t \to 0
+$$
 
-### **Theorem 6.1 (Emergent Einstein Equations)**
-In the continuum limit \(N \to \infty\) with fixed density \(\rho = 1/l_p^4\), the expectation value of the ACT action gives:
-\[
-\langle S_{\text{ACT}} \rangle \to \frac{1}{16\pi G} \int d^4x \sqrt{-g} (R - 2\Lambda) + S_{\text{matter}}
-\]
+For ACT theory:
 
-**Proof Outline:**
-1. Express causal set quantities in terms of continuum fields
-2. Use random sprinkling into manifold \(M\)
-3. Show expectation values match Einstein-Hilbert action
-4. Identify \(G \sim l_p^2\) from dimensional analysis
-
----
-
-### **Theorem 6.2 (Emergent Gauge Symmetries)**
-The algebraic structure \(\{U_x\}\) on the causal set gives rise to emergent gauge fields \(A_\mu^a\) with symmetry group \(\mathcal{G}\) determined by the algebraic relations.
-
-**Mathematical Structure:**
-\[
-\mathcal{G} = \text{Holonomy group of } \{U_x\} \text{ along causal paths}
-\]
-
-**Derivation:**
-1. Consider parallel transport along causal chains
-2. Define connection \(U_{xy} = U_x^\dagger U_y\)
-3. In continuum limit: \(U_{xy} \to \mathcal{P} \exp\left(i \int_x^y A_\mu dx^\mu\right)\)
-4. Group structure emerges from algebraic constraints
-
----
-
-### **Theorem 6.3 (Fermion Doubling and Chiral Symmetry)**
-The Dirac operator on the causal set naturally gives rise to chiral fermions without fermion doubling problem.
-
-**Key Insight:** The causal structure provides a natural "Sorkin spin structure" that avoids the Nielsen-Ninomiya theorem.
-
-**Implementation:**
-```python
-def causal_dirac_operator(causal_set, spinors):
-    """
-    Construct Dirac operator from causal relations
-    Avoids fermion doubling by using asymmetric stencil
-    """
-    D = np.zeros((len(causal_set), len(causal_set)), dtype=complex)
-    
-    for i, x in enumerate(causal_set):
-        # Future links (asymmetric)
-        futures = [j for j, y in enumerate(causal_set) 
-                   if x.precedes(y)]
-        for j in futures:
-            dt = causal_set[j].position[0] - x.position[0]
-            D[i, j] = 1j * gamma0 / (dt + 1e-10)
-        
-        # Past links (different coefficient)
-        pasts = [j for j, y in enumerate(causal_set)
-                if y.precedes(x)]
-        for j in pasts:
-            dt = x.position[0] - causal_set[j].position[0]
-            D[i, j] = -1j * gamma0 / (dt + 1e-10)
-    
-    return D
-```
-
----
-
-## 📈 Statistical Mechanics of Causal Sets
-
-### **Definition 7.1 (Causal Set Ensemble)**
-The partition function for causal sets:
-\[
-Z = \sum_{C} e^{-S_{\text{ACT}}[C]/\hbar}
-\]
-summed over all causal sets with \(N\) elements.
-
-### **Theorem 7.2 (Phase Structure)**
-The causal set ensemble exhibits phases:
-1. **Crystalline phase:** Regular lattice-like structure (high action)
-2. **Manifold-like phase:** Approximates continuum spacetime (dominant)
-3. **Non-manifold phases:** High-dimensional or disconnected
-
-**Evidence from simulations:**
-```python
-def analyze_phase_diagram(N_range, temperature_range):
-    """
-    Compute phase diagram of causal sets
-    """
-    phases = []
-    for N in N_range:
-        for T in temperature_range:
-            model = ACTModel(N=N, temperature=T)
-            model.thermalize(steps=1000)
-            
-            # Compute order parameters
-            dim = model.spectral_dimension()
-            connectivity = model.average_degree()
-            
-            # Classify phase
-            if dim > 3.5 and connectivity < 10:
-                phase = "Manifold-like"
-            elif dim < 2.0:
-                phase = "Crystalline"
-            else:
-                phase = "Non-manifold"
-            
-            phases.append((N, T, phase))
-    
-    return phases
-```
-
----
-
-## 🔗 Topological Invariants and Particle Content
-
-### **Definition 8.1 (Causal Homology)**
-Define homology groups \(H_k(C)\) from the nerve complex of causal intervals.
-
-**Theorem 8.2 (Particle-Topology Correspondence):**
-- \(H_0(C)\) nontrivial \(\leftrightarrow\) Scalar particles (Higgs)
-- \(H_1(C)\) nontrivial \(\leftrightarrow\) Vector particles (gauge bosons)
-- \(H_2(C)\) nontrivial \(\leftrightarrow\) Spinor particles (fermions)
-- \(H_3(C)\) nontrivial \(\leftrightarrow\) Tensor particles (gravitons)
-
-### **Example: Electron as Topological Defect**
-Consider a nontrivial cycle in \(H_2(C)\):
-\[
-[\gamma] \in H_2(C), \quad [\gamma] \neq 0
-\]
-This corresponds to a fermionic excitation with:
-- **Charge:** Winding number of phase around cycle
-- **Mass:** Size of minimal cycle
-- **Spin:** Orientation of cycle in spin structure
-
----
-
-## 🧬 Algebraic Constructions
-
-### **Definition 9.1 (Causal Algebra)**
-The algebra \(\mathcal{A}_C\) generated by operators \(\{U_x\}\) with relations:
-\[
-[U_x, U_y] = 
+$$
+d_s = 
 \begin{cases}
-0 & \text{if } x \prec y \text{ or } y \prec x \\
-i f(x,y) & \text{otherwise (spacelike)}
+4 & \text{at Planck scale} \\
+2 & \text{at large scales}
 \end{cases}
-\]
+$$
 
-### **Theorem 9.2 (Emergent Quantum Field Theory)**
-In continuum limit, \(\mathcal{A}_C\) becomes the algebra of quantum fields:
-\[
-\lim_{N \to \infty} \mathcal{A}_C \cong \mathcal{A}_{\text{QFT}}(M)
-\]
-the algebra of observables in quantum field theory on manifold \(M\).
+### 3.4 Continuum Limit
 
----
+In the continuum limit, $D$ reduces to the standard Dirac operator:
 
-## 📊 Numerical Implementation Details
+$$
+\lim_{N \to \infty} D = i\gamma^\mu \partial_\mu + m
+$$
 
-### **Algorithm 10.1: Causal Set Generation**
-```python
-def generate_causal_set(N, dimension=4, density=1.0):
-    """
-    Generate causal set via Poisson sprinkling into Minkowski space
-    """
-    # Poisson process in volume V = N/density
-    volume = N / density
-    side = volume ** (1/dimension)
-    
-    # Random events in [0, side]^d
-    events = np.random.random((N, dimension)) * side
-    
-    # Time coordinate first, ensure causal structure
-    events[:, 0] *= 2  # Time runs twice as fast for light cone structure
-    
-    # Create causal matrix
-    causal_matrix = np.zeros((N, N), dtype=bool)
-    
-    for i in range(N):
-        for j in range(N):
-            if i != j:
-                dt = events[j, 0] - events[i, 0]
-                if dt > 0:  # j is later than i
-                    dx = np.linalg.norm(events[j, 1:] - events[i, 1:])
-                    if dx < dt:  # Within light cone
-                        causal_matrix[i, j] = True
-    
-    return events, causal_matrix
-```
+where $\gamma^\mu$ are Dirac matrices.
 
-### **Algorithm 10.2: Emergent Geometry Calculation**
-```python
-def compute_emergent_metric(causal_set, causal_matrix, radius=0.1):
-    """
-    Compute emergent metric from causal structure
-    """
-    N = len(causal_set)
-    metric = np.zeros((N, 4, 4))
-    
-    for i in range(N):
-        # Find neighbors within proper time radius
-        neighbors = []
-        for j in range(N):
-            if causal_matrix[i, j] or causal_matrix[j, i]:
-                # Estimate proper time (simplified)
-                dt = abs(causal_set[j, 0] - causal_set[i, 0])
-                dx = np.linalg.norm(causal_set[j, 1:] - causal_set[i, 1:])
-                tau = np.sqrt(dt**2 - dx**2)
-                if tau < radius:
-                    neighbors.append(j)
-        
-        # Fit metric to neighbor distances
-        if len(neighbors) > 10:
-            # Use multidimensional scaling
-            positions = causal_set[neighbors]
-            distances = np.array([
-                np.linalg.norm(positions[k] - causal_set[i])
-                for k in range(len(neighbors))
-            ])
-            
-            # Simple metric approximation
-            metric[i] = np.eye(4) * (np.mean(distances)**2)
-    
-    return metric
-```
+## 4. Geometric Quantization
 
----
+### 4.1 Quantization Condition
 
-## 🎯 Key Mathematical Results
+The fine-structure constant emerges from geometric quantization:
 
-### **Result 11.1 (Background Independence)**
-ACT is fundamentally background-independent:
-- No pre-existing spacetime
-- Geometry emerges dynamically
-- Coordinates are relational
+$$
+\frac{1}{\alpha} = 4\pi \frac{\langle V \rangle}{\ell_P^2} \ln N
+$$
 
-**Mathematical Statement:** The theory is diffeomorphism invariant in the continuum limit, though the fundamental description uses only causal relations.
+where:
+- $\alpha$ = fine-structure constant
+- $\langle V \rangle$ = average simplex volume
+- $\ell_P$ = Planck length
+- $N$ = number of simplices
 
-### **Result 11.2 (Renormalization Group Flow)**
-The coupling constants run with scale according to:
-\[
-\frac{dg_i}{d\log E} = \beta_i(g) + \beta_i^{\text{quantum gravity}}(g, E/M_{pl})
-\]
-where \(\beta_i^{\text{QG}}\) are calculable from causal set dynamics.
+### 4.2 Derivation
 
-### **Result 11.3 (Holographic Principle)**
-ACT naturally incorporates holography:
-\[
-S_{\text{entropy}} \sim \frac{A}{4G} + \text{corrections}
-\]
-with area \(A\) measured in fundamental units.
+Starting from the path integral:
 
----
+$$
+Z = \int \mathcal{D}A \exp\left(iS[A]\right)
+$$
 
-## 📝 Exercises for Understanding
+with action:
 
-1. **Exercise 1:** Show that for a causal set sprinkled into Minkowski space with density \(\rho\), the expected number of elements in a causal interval of volume \(V\) is \(\rho V\).
+$$
+S[A] = \frac{1}{4e^2} \int F_{\mu\nu} F^{\mu\nu} \sqrt{-g} d^4x
+$$
 
-2. **Exercise 2:** Derive the discrete Dirac operator from the continuum one via discretization on a causal set.
+On a simplicial complex, this becomes:
 
-3. **Exercise 3:** Implement the Benincasa-Dowker action for a small causal set and verify it approximates the Einstein-Hilbert action.
+$$
+S_{\text{lattice}}[U] = \frac{1}{e^2} \sum_{\text{plaquettes } p} \text{Re Tr}(1 - U_p)
+$$
 
-4. **Exercise 4:** Show how chiral symmetry emerges in the causal set Dirac operator without fermion doubling.
+where $U_p$ is the product of link variables around plaquette $p$.
 
----
+### 4.3 Gauge Couplings
 
-## 🔍 Advanced Topics
+The gauge couplings emerge from group theory:
 
-### **Causal Set Co-homology**
-Define cohomology groups from the nerve of causal intervals. These capture topological information and relate to particle content.
+$$
+\frac{1}{\alpha_i} = \frac{C_2(G_i)}{4\pi} \frac{\langle A \rangle}{\ell_P^2}
+$$
 
-### **Spectral Geometry of Causal Sets**
-Study the spectrum of the Dirac operator and Laplacian. Relate eigenvalues to particle masses and cosmological constant.
+where $C_2(G_i)$ is the quadratic Casimir of gauge group $G_i$.
 
-### **Non-commutative Geometry Approach**
-Formulate ACT in terms of non-commutative geometry, where the causal set gives a spectral triple \(( \mathcal{A}, \mathcal{H}, D)\).
+## 5. Group Theory and Symmetries
 
-### **Quantum Gravity Corrections**
-Calculate quantum gravity effects from fluctuations of the causal set structure.
+### 5.1 Emergent Gauge Groups
 
----
+Standard Model gauge groups emerge from the fundamental group of the causal set:
 
-## 📚 References & Further Reading
+$$
+SU(3)_C \times SU(2)_L \times U(1)_Y \subset \pi_1(\mathcal{C})
+$$
 
-1. **Causal Set Theory:**
-   - Sorkin, R. D. (2005). "Causal sets: Discrete gravity"
-   - Dowker, F. (2006). "Causal sets and the deep structure of spacetime"
+### 5.2 Representation Theory
 
-2. **Emergent Gravity:**
-   - Verlinde, E. (2011). "On the origin of gravity and the laws of Newton"
-   - Jacobson, T. (1995). "Thermodynamics of spacetime"
+Particle representations correspond to irreducible representations of stabilizer subgroups:
 
-3. **Algebraic Quantum Field Theory:**
-   - Haag, R. (1996). "Local Quantum Physics"
-   - Brunetti, R., et al. (2003). "Algebraic approach to quantum field theory"
+| Particle | Representation | Origin |
+|----------|----------------|---------|
+| Quarks | $\mathbf{3}$ of $SU(3)$ | Triangulation vertices |
+| Leptons | $\mathbf{1}$ of $SU(3)$ | Tetrahedron centers |
+| Gauge bosons | Adjoint rep | Simplex edges |
 
-4. **Discrete Geometry:**
-   - Regge, T. (1961). "General relativity without coordinates"
-   - Ambjørn, J., et al. (2012). "Quantum Gravity via Causal Dynamical Triangulations"
+### 5.3 Symmetry Breaking
 
----
+Electroweak symmetry breaking emerges naturally:
 
-**Next:** [Fundamental Constants](03_Fundamental_Constants.md) – How α, G, ħ, c emerge from ACT principles.
+$$
+SU(2)_L \times U(1)_Y \to U(1)_{\text{EM}}
+$$
 
----
+through a geometric Higgs mechanism.
 
-*"Mathematics is the language in which God has written the universe." – Galileo Galilei*
+## 6. Topological Invariants
+
+### 6.1 Euler Characteristic
+
+For a simplicial complex:
+
+$$
+\chi = \sum_{k=0}^n (-1)^k f_k
+$$
+
+where $f_k$ is the number of $k$-simplices.
+
+### 6.2 Betti Numbers
+
+The $k$-th Betti number $b_k$ counts $k$-dimensional holes:
+
+$$
+b_k = \dim H_k(\mathcal{C})
+$$
+
+where $H_k$ is the $k$-th homology group.
+
+### 6.3 Chern Classes
+
+Gauge fields are associated with Chern classes:
+
+$$
+c_k(F) = \frac{1}{k!} \text{Tr}\left(\frac{iF}{2\pi}\right)^k
+$$
+
+which are topological invariants.
+
+## 7. Mathematical Consistency
+
+### 7.1 Continuum Limit
+
+The continuum limit exists if:
+
+$$
+\lim_{N \to \infty} \frac{\langle V \rangle}{\ell_P^4} = \text{finite}
+$$
+
+### 7.2 Renormalization Group Flow
+
+The $\beta$-function for the gravitational coupling:
+
+$$
+\beta_G = \mu \frac{\partial G}{\partial \mu} = \frac{G^2}{\ell_P^2} (a + b G \Lambda + \cdots)
+$$
+
+### 7.3 Fixed Points
+
+The theory has UV and IR fixed points:
+
+- **UV fixed point**: $G^* \sim \ell_P^2$, asymptotically safe
+- **IR fixed point**: $G \to G_N$, Newton's constant
+
+## 8. Computational Methods
+
+### 8.1 Monte Carlo Simulations
+
+The partition function is evaluated using Markov Chain Monte Carlo:
+
+$$
+\langle \mathcal{O} \rangle = \frac{1}{Z} \sum_{\mathcal{T}} \mathcal{O}[\mathcal{T}] e^{-S[\mathcal{T}]}
+$$
+
+### 8.2 Numerical Techniques
+
+- **Heat kernel methods**: For spectral dimension
+- **Dynamical triangulations**: For path integral
+- **Renormalization group**: For continuum limit
+
+## Appendix A: Mathematical Notation
+
+| Symbol | Meaning |
+|--------|---------|
+| $\mathcal{C}$ | Causal set |
+| $\prec$ | Causal relation |
+| $\ell_P$ | Planck length |
+| $D$ | Dirac operator |
+| $S_{\text{Regge}}$ | Regge action |
+| $\alpha$ | Fine-structure constant |
+| $G$ | Gravitational constant |
+| $\Lambda$ | Cosmological constant |
+
+## References
+
+1. Bombelli, L., Lee, J., Meyer, D., & Sorkin, R. D. (1987). *Spacetime as a causal set*
+2. Regge, T. (1961). *General relativity without coordinates*
+3. Connes, A. (1994). *Noncommutative geometry*
+4. Ambjørn, J., Jurkiewicz, J., & Loll, R. (2005). *Quantum Gravity as Sum over Spacetimes*
