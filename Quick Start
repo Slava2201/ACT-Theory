@@ -1,1 +1,15 @@
+from src.act_model import ACTModel
+from src.act_dark_matter import analyze_dark_matter
 
+# Create ACT model
+model = ACTModel(N=1000, temperature=0.7)
+
+# Thermalize
+model.thermalize(steps=500)
+
+# Compute emergent constants
+constants = model.compute_constants()
+print(f"α = {constants['alpha']:.12f}")
+
+# Analyze dark matter
+dm_results = analyze_dark_matter(model)
