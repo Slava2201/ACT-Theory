@@ -243,6 +243,6 @@ Special thanks to the open-source community for providing essential tools and li
 
 ---
 
-*Last updated: December 2024*  
+*Last updated: December 2025*  
 *Version: ACT 2.0*  
 *Status: Actively developed*
