@@ -378,8 +378,8 @@ pip install -r src/requirements.txt
 
 # Run quick test
 python src/run_experiment.py --test
-
-🚀 Quick Start
+```
+📖 Quick Start
 python
 from src.act_model import ACTModel
 from src.act_dark_matter import analyze_dark_matter
