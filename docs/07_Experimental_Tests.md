@@ -143,3 +143,26 @@ Gravitational waves propagate with energy-dependent speed:
 $$
 v_g(E) = c \left[ 1 - \xi \left( \frac{E}{E_{\text{LV}}} \right)^n \right]
 $$
+
+ACT predictions:
+
+$ξ = 1.0 \pm 0.2$
+
+$n = 2$ (quadratic)
+
+$E_{\text{LV}} = (1.0 \pm 0.1) \times 10^{19}$ GeV
+
+Test: Compare arrival times of GW170817 and GRB 170817A:
+
+$$
+\Delta t = \frac{D}{c} \, \xi \left( \frac{E}{E_{\text{LV}}} \right)^2 \approx 0.1 \, \text{s} \quad \text{at} \quad E = 100 \, \text{MeV}
+$$
+
+3.1.2 Birefringence
+Different polarizations propagate differently:
+
+$$
+v_{+} - v_{\times} = c \cdot \zeta \left( \frac{f}{f_{\text{LV}}} \right)^2
+$$
+
+ACT prediction: $ζ = (2.0 \pm 0.5) \times 10^{-17}$ at $f = 100$ Hz
