@@ -585,3 +585,14 @@ A. Mathematical Derivations
 A.1 Emergence of Friedmann Equations
 
 From the network Einstein equations:
+
+$$
+G_{\mu\nu} = 8\pi G \left\langle T_{\mu\nu} \right\rangle
+$$
+
+Assuming homogeneity and isotropy:
+
+$$
+ds^2 = -dt^2 + a^2(t) \left[ \frac{dr^2}{1 - kr^2} + r^2 d\Omega^2 \right]
+$$
+
