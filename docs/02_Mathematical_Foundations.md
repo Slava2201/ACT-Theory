@@ -208,9 +208,10 @@ $$
 3. Apply multidimensional scaling to recover approximate coordinates
 4. The metric is:
 
-   $$
-   g_{\mu\nu}(x) = \frac{1}{|\mathcal{N}_k(x)|} \sum_{y \in \mathcal{N}_k(x)} \frac{(x^\mu - y^\mu)(x^\nu - y^\nu)}{\tau^2(x,y)}
-   $$
+  $$
+g_{\mu\nu}(x) = \frac{1}{|N_k(x)|} \sum_{y \in N_k(x)} \frac{(x^{\mu} - y^{\mu})(x^{\nu} - y^{\nu})}{\tau^2(x,y)}
+$$
+
 
    where $\tau(x,y)$ is the proper time estimate.
 
