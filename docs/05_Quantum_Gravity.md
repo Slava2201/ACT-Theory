@@ -476,4 +476,69 @@ $$
 $$
 
 
+Appendices
+A. Mathematical Details
+A.1 Wheeler-DeWitt Equation in ACT
 
+Discrete version:
+
+$$
+\sum_y \left[ K(x,y)\Psi(C') - H(x)\Psi(C) \right] = 0
+$$
+
+where $K$ is causal kernel, $H$ is Hamiltonian constraint.
+
+A.2 Asymptotic Safety
+
+Gravitational coupling runs as:
+
+$$
+G(k) = \frac{G_0}{1 + (k/k_0)^2}
+$$
+
+Finite at all scales.
+
+B. Observables Calculation
+B.1 Spectral Dimension
+
+```python
+def calculate_spectral_dimension(causal_set, sigma_max=100):
+    """Calculate spectral dimension from diffusion."""
+    
+    dimensions = []
+    for sigma in np.logspace(-2, np.log10(sigma_max), 50):
+        # Diffusion process
+        prob = diffusion_process(causal_set, sigma)
+        msd = mean_squared_displacement(prob)
+        
+        # Local dimension
+        d_s = 2 * np.log(msd) / np.log(sigma)
+        dimensions.append(d_s)
+    
+    return np.array(dimensions)
+```
+B.2 Gravitational Wave Propagation
+
+```python
+def propagate_gravitational_wave(h_plus, h_cross, spacetime):
+    """Propagate GW through quantum spacetime."""
+    
+    # Modified dispersion
+    k = calculate_wave_numbers(h_plus)
+    omega = k * (1 + 0.1 * (k / k_P)**2)  # Quantum correction
+    
+    # Propagation with damping
+    h_plus_prop = propagate_with_damping(h_plus, omega, spacetime)
+    h_cross_prop = propagate_with_damping(h_cross, omega, spacetime)
+    
+    # Birefringence effect
+    if has_birefringence(spacetime):
+        h_plus_prop *= birefringence_factor('plus')
+        h_cross_prop *= birefringence_factor('cross')
+    
+    return h_plus_prop, h_cross_prop
+```
+C. Experimental Signatures
+C.1 LIGO Echo Template
+
+ACT predicts echo waveform:
