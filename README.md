@@ -177,4 +177,7 @@ def calculate_action(self):
 Metric Reconstruction
 The emergent metric tensor is reconstructed via:
 
-$$gμν(xi)=Nneigh1j∈N(xi)∑τij2ΔxijμΔxijν$$$$ $$   $$
+$$
+g_{\mu\nu}(x_i) = \frac{1}{N_{\text{neigh}}} \sum_{j \in N(x_i)} \frac{\Delta x_{ij}^{\mu} \Delta x_{ij}^{\nu}}{\tau_{ij}^2}
+$$
+
