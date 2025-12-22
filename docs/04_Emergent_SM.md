@@ -500,12 +500,12 @@ under $SU(3)×SU(2)×U(1)$.
 
 B. Numerical Algorithms
 B.1 Extracting Gauge Couplings
+```python
 
 def extract_gauge_couplings(universe):
     """Extract running gauge couplings from network."""
     couplings = {}
-```python
-    
+
     # Analyze network connectivity for SU(3)
     triangles = find_triangles(universe.adjacency)
     couplings['alpha_s'] = calculate_su3_coupling(triangles)
@@ -522,10 +522,11 @@ def extract_gauge_couplings(universe):
 ```
 
 B.2 Calculating Mass Matrices
+
+```python
 def calculate_mass_matrices(universe):
     """Calculate fermion mass matrices from network."""
     
-```python
     # Extract wavefunction overlaps
     overlaps = calculate_wavefunction_overlaps(universe)
     
