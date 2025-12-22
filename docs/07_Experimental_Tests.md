@@ -296,3 +296,52 @@ Standard Model Extension parameters:
 | $c_{TT}$ | $(2.0 \pm 0.5) \times 10^{-23}$ | $< 10^{-20}$ |
 | $d_{XY}$ | $(1.5 \pm 0.3) \times 10^{-27}$ | $< 10^{-25}$ |
 | $a_T$ | $(8.0 \pm 2.0) \times 10^{-31}$ GeV |	$< 10^{-27}$ GeV|
+
+
+5.1.2 Modified Commutation Relations
+
+Generalized uncertainty principle:
+
+$$\Delta x \Delta p \geq \frac{\hbar}{2} \left[ 1 + \beta (\Delta p)^2 / (m_P c)^2 \right]$
+ACT prediction: $\beta = 1.0 \pm 0.2$$
+
+5.2 Fifth Force Searches
+
+5.2.1 Yukawa-Type Potential
+
+Additional gravitational potential:
+
+$$V(r) = -G \frac{m_1 m_2}{r} \left[ 1 + \alpha e^{-r/\lambda} \right]$$
+
+ACT predictions:
+
+$\alpha = (1.0 \pm 0.3) \times 10^{-6}$
+
+$\lambda = 10 \pm 2$ μm
+
+5.2.2 Eötvös Experiments
+
+Test of equivalence principle:
+
+$$\eta = \frac{|a_1 - a_2|}{(a_1 + a_2)/2}$$
+
+ACT prediction: $\eta < 10^{-15}$ (Current best: $\eta < 10^{-14}$, MICROSCOPE)
+
+
+5.3 Quantum Optics Tests
+
+5.3.1 Vacuum Birefringence
+
+Different propagation speeds:
+
+$$\Delta n = n_{\parallel} - n_{\perp} = \xi \left( \frac{E}{E_{\text{LV}}} \right)^2$$
+
+Prediction: $\Delta n = (1.0 \pm 0.3) \times 10^{-20}$ at 1 eV.
+
+
+5.3.2 Photon-Photon Scattering
+
+Enhanced cross section:
+
+$$\sigma_{\gamma\gamma} = \sigma_{\text{QED}} \times \left[ 1 + 0.01 (E/E_P)^2 \right]$$
+
