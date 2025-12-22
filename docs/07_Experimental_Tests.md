@@ -136,8 +136,11 @@ Modifications to Higgs couplings:
 | $κ_τ$ | $1.05 \pm 0.05$ | 1.00 | $+0.05$ |
 
 3. Gravitational Wave Tests
+   
 3.1 Quantum Gravity Effects in GWs
+
 3.1.1 Modified Dispersion
+
 Gravitational waves propagate with energy-dependent speed:
 
 $$
@@ -159,6 +162,7 @@ $$
 $$
 
 3.1.2 Birefringence
+
 Different polarizations propagate differently:
 
 $$
@@ -166,3 +170,56 @@ v_{+} - v_{\times} = c \cdot \zeta \left( \frac{f}{f_{\text{LV}}} \right)^2
 $$
 
 ACT prediction: $ζ = (2.0 \pm 0.5) \times 10^{-17}$ at $f = 100$ Hz
+
+
+3.2 Black Hole Echoes
+
+3.2.1 Echo Signal
+
+Post-merger echoes with characteristic pattern:
+
+Time delay:
+
+$$\Delta t_{\text{echo}} = \frac{GM}{c^3} \ln\left(\frac{M^2}{m_P^2}\right) \approx 0.3 \ \text{ms}$ for $M = 30 M_{\odot}$$
+
+Amplitude damping:
+
+$$A_n = A_0 e^{-n\gamma}$ with $\gamma = 0.8 \pm 0.1$$
+
+Frequency content: Higher frequencies enhanced in echoes.
+
+3.2.2 Template for LIGO/Virgo
+
+The echo waveform:
+
+$$h_{\text{echo}}(t) = \sum_{n=1}^{N} \alpha_n h_{\text{ringdown}}(t - n\Delta t) e^{-n\gamma} \cos(\varphi_n)$$
+
+Parameters predicted by ACT for GW150914:
+
+$\Delta t = 0.31$ ms
+
+$\alpha = 0.25$
+
+$N = 5-10$ detectable echoes
+
+3.3 Stochastic Background
+3.3.1 Primordial Gravitational Waves
+From inflation:
+
+$$\Omega_{\text{GW}}(f) = \frac{r A_s}{24} \left( \frac{f}{f_*} \right)^{n_t}$$
+
+ACT predictions:
+
+$r = 0.004 \pm 0.002$
+
+$n_t = -0.008 \pm 0.004$
+
+$\Omega_{\text{GW}}(100 \ \text{Hz}) = (1.2 \pm 0.3) \times 10^{-9}$
+
+3.3.2 Astrophysical Background
+From compact binary mergers:
+
+$$\Omega_{\text{GW}}^{\text{astro}}(f) = \frac{8\pi^{5/3}}{9} f^{2/3} \int dz \frac{R(z)}{(1+z)^{4/3} H(z)}$$
+
+ACT modifies merger rate $R(z)$ at high $z$.
+
