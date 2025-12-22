@@ -379,3 +379,34 @@ def calculate_act_action(causal_set, alpha=1.0, beta=0.1, gamma=0.01):
         S_T += topological_charge(defect)
     
     return alpha * S_V - beta * S_R + gamma * S_T
+```
+
+7.2 Metropolis Algorithm for Quantum Gravity
+def metropolis_step(causal_set, beta=1.0):
+    """One step of Metropolis algorithm for quantum gravity."""
+    
+    # Propose change (add/remove causal relation)
+    i, j = random_pair()
+    current_action = calculate_action(causal_set)
+    
+    # Flip causal relation
+    causal_set[i, j] = 1 - causal_set[i, j]
+    causal_set[j, i] = 1 - causal_set[j, i]  # Symmetry
+    
+    new_action = calculate_action(causal_set)
+    delta_S = new_action - current_action
+    
+    # Metropolis acceptance
+    if delta_S < 0 or random() < exp(-beta * delta_S):
+        return causal_set  # Accept
+    else:
+        # Reject: flip back
+        causal_set[i, j] = 1 - causal_set[i, j]
+        causal_set[j, i] = 1 - causal_set[j, i]
+        return causal_set
+        ```
+
+        7.3 Convergence Tests
+Test 7.1 (Scaling Test): Verify that as $N \to \infty$:
+
+ $$\frac{S_{\text{ACT}}(N)}{N^{2/3}} \to \text{constant}$$
