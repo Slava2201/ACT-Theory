@@ -607,3 +607,80 @@ $$
 $$
 
 
+B. Numerical Recipes
+B.1 Generating ACT Initial Conditions
+
+```python
+def generate_act_initial_power_spectrum(k, z=99):
+    """Generate ACT-modified primordial power spectrum."""
+    
+    # Base ΛCDM power spectrum
+    P_ΛCDM = primordial_power_spectrum(k, As=2.1e-9, ns=0.965)
+    
+    # ACT modification
+    k_cut = 1 / (0.1 * l_P * (1+z))  # Comoving cutoff
+    P_ACT = P_ΛCDM * (1 + (k/k_cut)**2)**(-0.5)
+    
+    return P_ACT
+```
+
+B.2 Measuring CMB Anomalies
+
+```python
+def measure_cmb_anomalies(cmb_map, mask=None):
+    """Measure CMB anomalies in ACT simulation."""
+    
+    anomalies = {}
+    
+    # Low-ell power
+    cl = anafast(cmb_map)
+    anomalies['quadrupole'] = cl[2] * 2*np.pi/(2*2+1)
+    anomalies['octopole'] = cl[3] * 2*np.pi/(2*3+1)
+    
+    # Hemispherical asymmetry
+    asymmetry = measure_hemispherical_asymmetry(cmb_map)
+    anomalies['hemispherical_asymmetry'] = asymmetry['amplitude']
+    anomalies['asymmetry_direction'] = asymmetry['direction']
+    
+    # Cold spot
+    cold_spot = find_cold_spot(cmb_map, threshold=-20e-6)
+    anomalies['cold_spot_location'] = cold_spot['location']
+    anomalies['cold_spot_significance'] = cold_spot['significance']
+    
+    return anomalies
+```
+C. Observational Signatures
+C.1 BAO Signature
+
+ACT predicts modified BAO peak:
+
+$$
+\xi_{ACT}(r) = \xi_{\Lambda CDM}(r) \times \left[1 + 0.001 \cos\left(\frac{2\pi r}{r_d}\right)\right]
+$$
+
+C.2 Weak Lensing
+
+Modified lensing potential power spectrum:
+
+$$
+C_{\ell}^{\psi\psi}(ACT) = C_{\ell}^{\psi\psi}(\Lambda CDM) \times \left[1 - 0.02 \left(\frac{1000}{\ell}\right)^{0.5}\right]
+$$
+
+Conclusion
+ACT provides a complete cosmological framework that:
+
+✅ Resolves initial singularity through quantum bounce
+
+✅ Predicts inflation parameters consistent with observations
+
+✅ Explains dark matter and dark energy from network properties
+
+✅ Accounts for CMB anomalies without fine-tuning
+
+✅ Makes testable predictions for upcoming experiments
+
+✅ Provides numerical tools for cosmological simulations
+
+The universe emerges as a large causal network, with all cosmological phenomena arising naturally from its quantum dynamics.
+
+Next: Experimental Tests →
