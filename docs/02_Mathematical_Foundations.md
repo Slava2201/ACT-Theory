@@ -201,9 +201,11 @@ $$
 1. For each event $x$, find its $k$ nearest neighbors $\mathcal{N}_k(x)$
 2. Compute the matrix of causal intervals:
 
-   $$
-   M_{xy} = |I(x,y)|
-   $$
+$$
+M_{xy} = |I(x,y)|
+$$
+
+
 
 3. Apply multidimensional scaling to recover approximate coordinates
 4. The metric is:
