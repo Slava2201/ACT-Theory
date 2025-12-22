@@ -58,11 +58,13 @@ From the causal network density $\rho = N/V$:
 
 **Planck Length**:
 
+
 $$
 \ell_P = \left( \frac{V}{N} \right)^{1/4} = \left( \frac{1}{\rho} \right)^{1/4}
 $$
 
 Numerically:
+
 $$
 \ell_P = 1.616255 \times 10^{-35} \text{ m}
 $$
@@ -82,6 +84,7 @@ M_P = \sqrt{\frac{\hbar c}{G}} = \beta^{-1/2} \left( \frac{N}{\ln N} \right)^{1/
 $$
 
 Numerically:
+
 $$
 M_P = 2.176434 \times 10^{-8} \text{ kg} = 1.220910 \times 10^{19} \text{ GeV/c}^2
 $$
@@ -124,6 +127,7 @@ G_{\text{pred}} = 6.6732 \times 10^{-11} \ \text{m}^3 \text{kg}^{-1} \text{s}^{-
 $$
 
 vs. measured:
+
 $$
 G_{\text{exp}} = 6.67430 \times 10^{-11} \ \text{m}^3 \text{kg}^{-1} \text{s}^{-2}
 $$
@@ -172,6 +176,7 @@ $$
 $$
 
 vs. measured:
+
 $$
 \alpha_{\text{EM}}^{-1}(\text{exp}) = 137.035999084(21)
 $$
@@ -185,6 +190,7 @@ e = \sqrt{4\pi\epsilon_0\hbar c \alpha_{\text{EM}}}
 $$
 
 Numerically:
+
 $$
 e = 1.602176634 \times 10^{-19} \ \text{C}
 $$
@@ -280,11 +286,13 @@ $$
 $$
 
 Energy density:
+
 $$
 \rho_\Lambda = \frac{\Lambda c^2}{8\pi G} = 5.8 \times 10^{-27} \ \text{kg/m}^3
 $$
 
 vs. measured:
+
 $$
 \Lambda_{\text{exp}} = 1.1056 \times 10^{-52} \ \text{m}^{-2}
 $$
