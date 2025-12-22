@@ -177,9 +177,3 @@ def calculate_action(self):
 Metric Reconstruction
 The emergent metric tensor is reconstructed via:
 
- begin{document}
-
-    $$ g{munu}(xi) = frac{1}{N{text{neigh}}} sum{j in N(xi)} tau{ij}^2 Delta x{ij}^mu Delta x{ij}^nu $$
-
-    end{document}
-    `
