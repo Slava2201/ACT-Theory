@@ -177,3 +177,4 @@ def calculate_action(self):
 Metric Reconstruction
 The emergent metric tensor is reconstructed via:
 
+$$gμν(xi)=Nneigh1j∈N(xi)∑τij2ΔxijμΔxijν$$$$ $$   $$
