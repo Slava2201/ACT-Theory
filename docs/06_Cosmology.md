@@ -596,3 +596,14 @@ $$
 ds^2 = -dt^2 + a^2(t) \left[ \frac{dr^2}{1 - kr^2} + r^2 d\Omega^2 \right]
 $$
 
+gives Friedmann equations.
+
+A.2 Quantum Bounce Solution
+
+The modified Raychaudhuri equation:
+
+$$
+\ddot{a} = -\frac{4\pi G}{3}a(\rho + 3p)\left(1 - \frac{\rho}{\rho_{\max}}\right)
+$$
+
+
