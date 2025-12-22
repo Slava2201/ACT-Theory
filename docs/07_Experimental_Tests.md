@@ -232,3 +232,9 @@ ACT predicts specific patterns in CMB.
 4.1.1 Low- $\ell$ Power Suppression
 Angular power spectrum at $\ell = 2-5$:
 
+
+| $\ell$ | $C_\ell^{\text{ACT}}$ (μK²) | $C_\ell^{\Lambda\text{CDM}}$ (μK²) | Ratio |
+| :--- | :--- | :--- | :--- |
+| 2 | $950 \pm 150$ | $1150 \pm 200$ | $0.83 \pm 0.15$ |
+| 3	| $550 \pm 100$ | $650 \pm 120$ | $0.85 \pm 0.15$ |
+| 4	| $350 \pm 70$ | $400 \pm 80$ |	$0.88 \pm 0.15$ |
