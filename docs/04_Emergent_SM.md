@@ -363,6 +363,7 @@ m_1 : m_2 : m_3 = \epsilon^2 : \epsilon : 1
 $$
 
 with $\epsilon \approx 0.15$, giving:
+
 $$
 m_1 \approx 0.001 \ \text{eV}, \quad m_2 \approx 0.009 \ \text{eV}, \quad m_3 \approx 0.05 \ \text{eV}
 $$
@@ -503,6 +504,7 @@ B.1 Extracting Gauge Couplings
 def extract_gauge_couplings(universe):
     """Extract running gauge couplings from network."""
     couplings = {}
+```python
     
     # Analyze network connectivity for SU(3)
     triangles = find_triangles(universe.adjacency)
@@ -518,11 +520,12 @@ def extract_gauge_couplings(universe):
     
     return couplings
 ```
-```
+
 B.2 Calculating Mass Matrices
 def calculate_mass_matrices(universe):
     """Calculate fermion mass matrices from network."""
     
+```python
     # Extract wavefunction overlaps
     overlaps = calculate_wavefunction_overlaps(universe)
     
@@ -538,7 +541,6 @@ def calculate_mass_matrices(universe):
     
     return {'up': masses_u, 'down': masses_d, 'leptons': masses_e}
     ```
-```
 ```
 C. Experimental Tests
 C.1 LHC Signatures
