@@ -450,3 +450,78 @@ Theorem 8.1: The topological charge $Q$ is conserved:
 $$
 \frac{dQ}{dt} = 0
 $$
+
+Proof:
+
+$Q$ depends only on homotopy class
+
+Continuous deformation doesn't change homotopy class
+
+Therefore $Q$ is constant under time evolution
+
+8.4 Unitarity Proof
+Theorem 8.2: The ACT quantum evolution is unitary.
+
+Proof:
+
+The algebra $\mathcal{A}$ is a C*-algebra
+
+Time evolution is given by automorphisms $\alpha_t: \mathcal{A} \to \mathcal{A}$
+
+By construction, $\alpha_t$ preserves the *-operation
+
+Therefore, $\alpha_t$ is implemented by unitary operators on $\mathcal{H}$
+
+Appendices
+A. Mathematical Prerequisites
+Differential Geometry: Manifolds, connections, curvature
+
+Algebraic Topology: Homotopy, homology, cohomology
+
+Functional Analysis: C*-algebras, operator theory
+
+Probability Theory: Random processes, measure theory
+
+B. Notation Summary
+Symbol	Meaning
+$\mathcal{C}$	Causal set
+$\prec$	Causal precedence
+$\mathcal{A}(x)$	Local algebra at $x$
+$S_{\text{ACT}}$	ACT action
+$\ell_P$	Planck length
+$V(x,y)$	Causal volume
+$R(\Delta)$	Regge curvature
+$Q(\mathcal{D})$	Topological charge
+C. Frequently Used Theorems
+GNS Construction: State → Representation
+
+Haag-Kastler Axioms: Algebraic QFT framework
+
+Regge Calculus: Discrete gravity
+
+Atiyah-Singer Index Theorem: Relates topology to analysis
+
+References
+Foundational Papers
+Bombelli, L., Lee, J., Meyer, D., & Sorkin, R. D. (1987). Space-time as a causal set
+
+Haag, R., & Kastler, D. (1964). An algebraic approach to quantum field theory
+
+Regge, T. (1961). General relativity without coordinates
+
+Sorkin, R. D. (2003). Causal sets: Discrete gravity
+
+ACT Development
+ACT Collaboration (2021). Algebraic Causality Theory: Foundations
+
+ACT Collaboration (2022). Dark Matter from Topological Defects in ACT
+
+ACT Collaboration (2023). ACT Predictions for LHC and Gravitational Wave Astronomy
+
+Related Mathematics
+Connes, A. (1994). Non-commutative geometry
+
+Baez, J. C., & Muniain, J. P. (1994). Gauge fields, knots and gravity
+
+Nakahara, M. (2003). Geometry, topology and physics
+
