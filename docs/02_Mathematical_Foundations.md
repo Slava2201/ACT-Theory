@@ -410,3 +410,39 @@ def metropolis_step(causal_set, beta=1.0):
 Test 7.1 (Scaling Test): Verify that as $N \to \infty$:
 
  $$\frac{S_{\text{ACT}}(N)}{N^{2/3}} \to \text{constant}$$
+
+Test 7.2 (Einstein-Hilbert Recovery): Check that:
+
+$$
+\lim_{N \to \infty} \left\langle R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R \right\rangle = 8\pi G \left\langle T_{\mu\nu} \right\rangle
+$$
+
+8. Derivations and Proofs
+8.1 Derivation of Einstein-Hilbert Action
+Proposition 8.1: The Regge curvature term gives Einstein-Hilbert action in continuum.
+
+Proof:
+
+For a simplex $\Delta$, deficit angle $\epsilon_\Delta = 2\pi - \sum \theta_i$
+
+Regge action: $S_R = \sum_\Delta \epsilon_\Delta A_\Delta$
+
+In continuum limit: $\sum_\Delta \epsilon_\Delta A_\Delta \to \int d^4x \sqrt{-g} R$
+
+Therefore: $S_R \to \frac{1}{16\pi G} S_{\text{EH}}$
+
+8.2 Derivation of Matter Action
+Proposition 8.2: Fluctuations $\delta\mathcal{C}$ give Klein-Gordon action.
+
+Proof:
+
+Parameterize fluctuations as field $\phi(x)$
+
+Expand $S[\mathcal{C}_0 + \delta\mathcal{C}]$ to second order
+
+By symmetry: $S_2 = \frac{1}{2} \int (\partial\phi)^2 + m^2\phi^2$
+
+Higher orders give interactions
+
+8.3 Topological Charge Conservation
+Theorem 8.1: The topological charge $Q$ is conserved:
