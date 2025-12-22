@@ -238,3 +238,49 @@ Angular power spectrum at $\ell = 2-5$:
 | 2 | $950 \pm 150$ | $1150 \pm 200$ | $0.83 \pm 0.15$ |
 | 3	| $550 \pm 100$ | $650 \pm 120$ | $0.85 \pm 0.15$ |
 | 4	| $350 \pm 70$ | $400 \pm 80$ |	$0.88 \pm 0.15$ |
+
+
+4.1.2 Hemispherical Asymmetry
+
+Dipole modulation:
+
+$$\frac{\Delta T}{T}(\hat{n}) = \left[ 1 + A (\hat{n} \cdot \hat{p}) \right] \frac{\Delta T}{T}_{\text{iso}}$$
+
+ACT predictions:
+
+$A = 0.07 \pm 0.02$
+
+$\hat{p} = (l,b) = (227^\circ \pm 10^\circ, -27^\circ \pm 10^\circ)$
+
+
+4.1.3 Cold Spot
+
+Non-Gaussian cold spot:
+
+Location: $(l,b) = (209^\circ, -57^\circ)$
+
+Size: $5^\circ$ radius
+
+Significance: $3.5\sigma$
+
+4.2 Large-Scale Structure
+
+4.2.1 Matter Power Spectrum
+
+Suppression at small scales ($k > 10 \ h/$Mpc):
+
+$$P_{\text{ACT}}(k) = P_{\Lambda\text{CDM}}(k) \times \left[ 1 - 0.03 \left( \frac{k}{10 \ h/\text{Mpc}} \right)^2 \right]$$
+
+4.2.2 Halo Mass Function
+
+Fewer low-mass halos:
+
+$$\frac{n_{\text{ACT}}(M)}{n_{\Lambda\text{CDM}}(M)} = \exp\left[ -0.1 \left( \frac{10^{10} M_{\odot}}{M} \right)^{0.5} \right]$$
+
+4.3 BAO Measurements
+
+Modified sound horizon:
+
+$$r_d^{\text{ACT}} = r_d^{\Lambda\text{CDM}} \times \left[ 1 - 0.0012 (z/3)^2 \right]$$
+
+At $z = 0.5$: $\Delta r_d / r_d = -0.0002$.
