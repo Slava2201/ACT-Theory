@@ -301,6 +301,7 @@ $$
 
 From Friedmann equation with $\Omega_\Lambda \approx 0.69$:
 
+
 $$
 H_0 = c \sqrt{\frac{\Lambda}{3(1 - \Omega_m)}}
 $$
