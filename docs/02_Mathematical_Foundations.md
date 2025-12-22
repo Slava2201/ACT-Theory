@@ -446,6 +446,7 @@ Higher orders give interactions
 
 8.3 Topological Charge Conservation
 Theorem 8.1: The topological charge $Q$ is conserved:
+
 $$
 \frac{dQ}{dt} = 0
 $$
