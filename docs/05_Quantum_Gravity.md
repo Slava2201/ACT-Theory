@@ -542,3 +542,24 @@ C. Experimental Signatures
 C.1 LIGO Echo Template
 
 ACT predicts echo waveform:
+
+$$
+h_{\text{echo}}(t) = \sum_{n=1}^{N_{\text{echo}}} \alpha_n h(t - n\Delta t) e^{-n\gamma}
+$$
+
+Parameters:
+
+$\Delta t \approx 0.3$ ms for $30M_\odot$ black hole
+
+$\alpha \approx 0.1-0.3$
+
+$\gamma \approx 0.8$
+
+C.2 Gamma-ray Burst Time Delay
+
+Energy-dependent arrival time:
+
+$$
+\Delta t(E) = \xi \frac{c}{D} \left( \frac{E_P}{E} \right)^2
+$$
+
