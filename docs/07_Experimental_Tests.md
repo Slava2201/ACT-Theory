@@ -203,7 +203,9 @@ $\alpha = 0.25$
 $N = 5-10$ detectable echoes
 
 3.3 Stochastic Background
+
 3.3.1 Primordial Gravitational Waves
+
 From inflation:
 
 $$\Omega_{\text{GW}}(f) = \frac{r A_s}{24} \left( \frac{f}{f_*} \right)^{n_t}$$
@@ -222,4 +224,11 @@ From compact binary mergers:
 $$\Omega_{\text{GW}}^{\text{astro}}(f) = \frac{8\pi^{5/3}}{9} f^{2/3} \int dz \frac{R(z)}{(1+z)^{4/3} H(z)}$$
 
 ACT modifies merger rate $R(z)$ at high $z$.
+
+4. Cosmological Tests
+4.1 CMB Anomalies
+ACT predicts specific patterns in CMB.
+
+4.1.1 Low- $\ell$ Power Suppression
+Angular power spectrum at $\ell = 2-5$:
 
