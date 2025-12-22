@@ -384,7 +384,7 @@ def calculate_act_action(causal_set, alpha=1.0, beta=0.1, gamma=0.01):
 7.2 Metropolis Algorithm for Quantum Gravity
 def metropolis_step(causal_set, beta=1.0):
     """One step of Metropolis algorithm for quantum gravity."""
-    
+```python    
     # Propose change (add/remove causal relation)
     i, j = random_pair()
     current_action = calculate_action(causal_set)
@@ -405,7 +405,7 @@ def metropolis_step(causal_set, beta=1.0):
         causal_set[j, i] = 1 - causal_set[j, i]
         return causal_set
         ```
-
+```
 7.3 Convergence Tests
 
 Test 7.1 (Scaling Test): Verify that as $N \to \infty$:
