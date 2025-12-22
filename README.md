@@ -176,8 +176,5 @@ def calculate_action(self):
 
 Metric Reconstruction
 The emergent metric tensor is reconstructed via:
-$$ g_{\mu\nu}(x_i) = \frac{1}{N_{\text{neigh}}} \sum_{j \in N(x_i)} \tau_{ij}^2 \Delta x_{ij}^\mu \Delta x_{ij}^\nu $$
 
-$\frac{S_{\text{ACT}}(N)}{N^{2/3}} \to \text{constant}$
-
- $$\frac{S_{\text{ACT}}(N)}{N^{2/3}} \to \text{constant}$$
+  $$ g{munu}(xi) = frac{1}{N{text{neigh}}} sum{j in N(xi)} tau{ij}^2 Delta x{ij}^mu Delta x{ij}^nu $$
