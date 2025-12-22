@@ -459,3 +459,21 @@ print(f"Echo delay: {bh_props['echoes']['delay']:.3f} ms")
 9.3 Convergence Tests
 Test 9.1: Einstein equations in mean field:
 
+$$
+\lim_{N \to \infty} \left\langle R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R \right\rangle = 8\pi G \left\langle T_{\mu\nu} \right\rangle
+$$
+
+Test 9.2: Black hole thermodynamics:
+
+$$
+\lim_{A \to \infty} \frac{S(A)}{A / 4\ell_P^2} = 1
+$$
+
+Test 9.3: Cosmological constant:
+
+$$
+\Lambda_{\text{sim}} \to \Lambda_{\text{obs}} \quad \text{as} \quad N \to 10^{180}
+$$
+
+
+
