@@ -181,3 +181,4 @@ $$
 g_{\mu\nu}(x_i) = \frac{1}{N_{\text{neigh}}} \sum_{j \in N(x_i)} \frac{\Delta x_{ij}^{\mu} \Delta x_{ij}^{\nu}}{\tau_{ij}^2}
 $$
 
+where $\tau_{ij}$ is the causal time between events $i$ and $j$.
