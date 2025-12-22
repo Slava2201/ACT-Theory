@@ -457,3 +457,131 @@ print(f"Ω_m: {cosmic_history['density_parameters'][-1]['matter']:.3f}")
 print(f"Ω_Λ: {cosmic_history['density_parameters'][-1]['lambda']:.3f}")
 ```
 
+8.2 CMB Simulation
+```python
+def simulate_cmb(nside=256):
+    """Simulate CMB with ACT corrections."""
+    
+    # Generate ACT-modified power spectra
+    cl_tt, cl_ee, cl_bb, cl_te = calculate_act_cls()
+    
+    # Generate CMB maps
+    cmb_maps = {
+        'temperature': generate_healpix_map(cl_tt, nside=nside),
+        'E_mode': generate_healpix_map(cl_ee, nside=nside),
+        'B_mode': generate_healpix_map(cl_bb, nside=nside)
+    }
+    
+    # Add ACT-specific features
+    cmb_maps = add_act_features(cmb_maps)
+    
+    return cmb_maps, {'cl_tt': cl_tt, 'cl_ee': cl_ee, 'cl_bb': cl_bb, 'cl_te': cl_te}
+
+# Generate CMB sky
+cmb_sky, power_spectra = simulate_cmb(nside=128)
+
+# Analyze anomalies
+anomalies = detect_cmb_anomalies(cmb_sky['temperature'])
+print(f"Quadrupole: {anomalies['quadrupole']:.3f} μK^2")
+print(f"Octopole alignment: {anomalies['octopole_alignment']:.3f}")
+print(f"Hemispherical asymmetry: A = {anomalies['hemispherical_asymmetry']:.3f}")
+8.3 Large-Scale Structure
+```
+
+8.3 Large-Scale Structure
+```python
+def simulate_lss(box_size=1000, n_particles=256**3):
+    """Simulate large-scale structure with ACT."""
+    
+    # Initial conditions with ACT power spectrum
+    initial_conditions = generate_act_initial_conditions(
+        box_size=box_size,
+        n_particles=n_particles,
+        z_start=99
+    )
+    
+    # N-body simulation with ACT modifications
+    simulation = run_act_nbody(
+        initial_conditions,
+        n_steps=1000,
+        cosmology=act_cosmology
+    )
+    
+    # Analyze results
+    results = {
+        'halo_catalog': find_halos(simulation),
+        'power_spectrum': calculate_nonlinear_pk(simulation),
+        'bispectrum': calculate_bispectrum(simulation),
+        'void_statistics': find_voids(simulation)
+    }
+    
+    return simulation, results
+
+# Run LSS simulation
+lss_sim, lss_results = simulate_lss(box_size=500, n_particles=128**3)
+
+# Print statistics
+print(f"Number of halos: {len(lss_results['halo_catalog'])}")
+print(f"σ_8: {calculate_sigma8(lss_results['power_spectrum']):.3f}")
+print(f"f_ NL: {calculate_fnl(lss_results['bispectrum']):.1f}")
+```
+
+9. Observational Tests
+9.1 Current Constraints
+
+| Observation | ACT Prediction    | Measurement           | Tension    |
+| :---------- | :---------------- | :-------------------- | :--------- |
+| $H_0$       | $67.8 \pm 0.5$    | $67.4 \pm 0.5$ (Planck) | 0.4 $\sigma$ |
+| $S_8$       | $0.810 \pm 0.015$ | $0.832 \pm 0.013$ (DES)  | 1.1 $\sigma$ |
+| $n_s$       | $0.965 \pm 0.004$ | $0.9649 \pm 0.0042$      | 0.0 $\sigma$ |
+| $r$         | $< 0.006$         | $< 0.036$ (BK18)       | consistent |
+| $f_{NL}$    | $1.2 \pm 0.3$     | $-0.9 \pm 5.1$ (Planck)  | consistent |
+
+
+9.2 Future Tests
+CMB-S4 (2030s):
+
+Measure $r$ to $σ(r) = 0.001$
+
+Test scale-dependent $n_s$
+
+Detect ACT modifications to polarization
+
+Euclid (2026-2030):
+
+Measure $S_8$ to 1%
+
+Test modified growth of structure
+
+Constrain ACT halo mass function
+
+SKA (2030s):
+
+21cm tomography at $z = 6-30$
+
+Test ACT modifications to $P(k)$ at small scales
+
+Measure primordial non-Gaussianity
+
+LISA (2034):
+
+Probe inflation through GW background
+
+Test quantum bounce through very low frequency GWs
+
+9.3 Key Predictions for Upcoming Experiments
+Slight suppression of CMB quadrupole ($\sim 15%$)
+
+Enhanced small-scale CMB polarization ($\sim 5%$ at $\ell = 3000$)
+
+Modified matter power spectrum at $k > 10$ h/Mpc
+
+Specific non-Gaussian signature ($f_{NL} = 1.2 \pm 0.3$)
+
+No primordial B-modes ($r < 0.006$)
+
+Appendices
+A. Mathematical Derivations
+A.1 Emergence of Friedmann Equations
+
+From the network Einstein equations:
