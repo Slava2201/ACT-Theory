@@ -284,3 +284,15 @@ Modified sound horizon:
 $$r_d^{\text{ACT}} = r_d^{\Lambda\text{CDM}} \times \left[ 1 - 0.0012 (z/3)^2 \right]$$
 
 At $z = 0.5$: $\Delta r_d / r_d = -0.0002$.
+
+
+5. Laboratory Tests
+5.1 Tests of Lorentz Invariance
+5.1.1 SME Coefficients
+Standard Model Extension parameters:
+
+| Coefficient |	ACT Prediction | Current Limit |
+| :--- | :--- | :--- |
+| $c_{TT}$ | $(2.0 \pm 0.5) \times 10^{-23}$ | $< 10^{-20}$ |
+| $d_{XY}$ | $(1.5 \pm 0.3) \times 10^{-27}$ | $< 10^{-25}$ |
+| $a_T$ | $(8.0 \pm 2.0) \times 10^{-31}$ GeV |	$< 10^{-27}$ GeV|
