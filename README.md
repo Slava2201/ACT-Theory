@@ -178,3 +178,4 @@ Metric Reconstruction
 The emergent metric tensor is reconstructed via:
 $$ g_{\mu\nu}(x_i) = \frac{1}{N_{\text{neigh}}} \sum_{j \in N(x_i)} \tau_{ij}^2 \Delta x_{ij}^\mu \Delta x_{ij}^\nu $$
 
+$\frac{S_{\text{ACT}}(N)}{N^{2/3}} \to \text{constant}$
