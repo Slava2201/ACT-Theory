@@ -172,3 +172,9 @@ def calculate_action(self):
     # Topological term
     total_action += self.gamma * self._topological_charge()
     return total_action
+```
+
+Metric Reconstruction
+The emergent metric tensor is reconstructed via:
+$$ g_{\mu\nu}(x_i) = \frac{1}{N_{\text{neigh}}} \sum_{j \in N(x_i)} \tau_{ij}^2 \Delta x_{ij}^\mu \Delta x_{ij}^\nu $$
+
