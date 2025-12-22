@@ -406,7 +406,8 @@ def metropolis_step(causal_set, beta=1.0):
         return causal_set
         ```
 
-        7.3 Convergence Tests
+7.3 Convergence Tests
+
 Test 7.1 (Scaling Test): Verify that as $N \to \infty$:
 
  $$\frac{S_{\text{ACT}}(N)}{N^{2/3}} \to \text{constant}$$
