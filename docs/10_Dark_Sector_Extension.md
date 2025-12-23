@@ -67,16 +67,19 @@ where:
 **Three memory types** correspond to three dark matter components:
 
 1. **Persistent Memory** (Cold DM):
+
    $$
    M_P(x) = \sum_{\text{stable loops}} e^{-A_{\text{loop}}/A_0}
    $$
 
-2. **Working Memory** (Warm DM):
+3. **Working Memory** (Warm DM):
+
    $$
    M_W(x) = \sum_{\text{recent chains}} e^{-τ/τ_W}
    $$
 
-3. **Cache Memory** (Hot DM remnants):
+5. **Cache Memory** (Hot DM remnants):
+
    $$
    M_C(x) = \sum_{\text{frequent patterns}} f_{\text{pattern}}
    $$
