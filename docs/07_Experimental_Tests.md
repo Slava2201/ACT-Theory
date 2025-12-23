@@ -405,3 +405,75 @@ $$\zeta(\theta) = \frac{3}{2} x \ln x - \frac{x}{4} + \frac{1}{2} + \delta\zeta(
 
 where $\delta\zeta(\theta)$ from quantum gravity.
 
+---
+
+7. Data Analysis Pipeline
+7.1 ACT Data Analysis Framework
+
+```python
+import numpy as np
+import pandas as pd
+from act_experimental import ACTDataAnalyzer
+
+class ACTExperimentalPipeline:
+    """Pipeline for testing ACT predictions against data."""
+    
+    def __init__(self):
+        self.predictions = load_act_predictions()
+        self.experimental_data = load_experimental_data()
+        self.statistics = {}
+    
+    def compare_with_experiment(self, prediction_id):
+        """Compare ACT prediction with experimental data."""
+        
+        pred = self.predictions[prediction_id]
+        data = self.experimental_data[prediction_id['experiment']]
+        
+        # Calculate likelihood ratio
+        χ2 = self.calculate_chi2(pred, data)
+        p_value = self.calculate_p_value(χ2, pred['dof'])
+        
+        # Bayesian analysis
+        bayes_factor = self.calculate_bayes_factor(pred, data)
+        
+        result = {
+            'prediction_id': prediction_id,
+            'χ2': χ2,
+            'p_value': p_value,
+            'bayes_factor': bayes_factor,
+            'agreement': self.assess_agreement(χ2, p_value, bayes_factor)
+        }
+        
+        self.statistics[prediction_id] = result
+        return result
+    
+    def global_fit(self):
+        """Perform global fit of all ACT predictions."""
+        
+        total_χ2 = 0
+        total_dof = 0
+        
+        for pid in self.predictions:
+            result = self.compare_with_experiment(pid)
+            total_χ2 += result['χ2']
+            total_dof += self.predictions[pid]['dof']
+        
+        global_p = self.calculate_p_value(total_χ2, total_dof)
+        
+        return {
+            'total_χ2': total_χ2,
+            'total_dof': total_dof,
+            'χ2/dof': total_χ2/total_dof,
+            'global_p_value': global_p,
+            'agreement_level': self.assess_global_agreement(total_χ2/total_dof)
+        }
+
+# Initialize and run pipeline
+pipeline = ACTExperimentalPipeline()
+global_fit_result = pipeline.global_fit()
+
+print("ACT Global Fit Results:")
+print(f"χ²/dof = {global_fit_result['χ2/dof']:.2f}")
+print(f"p-value = {global_fit_result['global_p_value']:.3f}")
+print(f"Agreement: {global_fit_result['agreement_level']}")
+```
