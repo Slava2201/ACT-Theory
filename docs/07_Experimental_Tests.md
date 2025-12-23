@@ -345,3 +345,21 @@ Enhanced cross section:
 
 $$\sigma_{\gamma\gamma} = \sigma_{\text{QED}} \times \left[ 1 + 0.01 (E/E_P)^2 \right]$$
 
+
+6. Astrophysical Tests
+
+6.1 Gamma-Ray Bursts
+
+6.1.1 Time Delays
+
+Energy-dependent arrival times:
+
+$$\Delta t = \frac{D}{c} \xi \left( \frac{E}{E_{\text{LV}}} \right)^n$$
+
+For GRB at $z = 1$, $D = 6.6$ Gpc:
+
+| Energy | Delay (ACT) | Current Limit |
+| :--- | :--- | :--- |
+| 100 MeV |	$0.10 \pm 0.03$ s |	$< 0.5$ s |
+| 10 GeV | $100 \pm 30$ s |	$< 500$ s |
+| 1 TeV | $(1.0 \pm 0.3) \times 10^5$ s | $< 5 \times 10^5$ s |
