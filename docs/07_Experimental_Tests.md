@@ -363,3 +363,45 @@ For GRB at $z = 1$, $D = 6.6$ Gpc:
 | 100 MeV |	$0.10 \pm 0.03$ s |	$< 0.5$ s |
 | 10 GeV | $100 \pm 30$ s |	$< 500$ s |
 | 1 TeV | $(1.0 \pm 0.3) \times 10^5$ s | $< 5 \times 10^5$ s |
+
+
+6.1.2 Spectral Features
+Absorption features:
+
+$$\frac{dN}{dE} = N_0 E^{-\Gamma} \exp\left[ -\tau(E) \right]$$
+
+with optical depth $\tau(E)$ modified by ACT.
+
+6.2 Neutrino Astrophysics
+
+6.2.1 Neutrino Oscillations
+
+Modified dispersion affects oscillations:
+
+$$P(\nu_\alpha \to \nu_\beta) = \sin^2(2\theta) \sin^2\left( \frac{\Delta m^2 L}{4E} \left[ 1 + \zeta (E/E_P)^2 \right] \right)$$
+
+ACT prediction: $\zeta = (3.0 \pm 1.0) \times 10^{-4}$
+
+6.2.2 Neutrino Time Delays
+
+From IceCube:
+
+$$\Delta t_{\nu\gamma} = \frac{D}{c} \left[ \left( \frac{E_\nu}{E_{\text{LV}}} \right)^2 - \left( \frac{E_\gamma}{E_{\text{LV}}} \right)^2 \right]$$
+
+
+6.3 Pulsar Timing Arrays
+
+6.3.1 Gravitational Wave Background
+
+Spectral shape modified by ACT:
+
+$$\Omega_{\text{GW}}(f) \propto f^{2/3} \left[ 1 - 0.01 \left( \frac{f}{1 \ \text{nHz}} \right)^2 \right]$$
+
+6.3.2 Hellings-Downs Curve
+
+Angular correlation modified:
+
+$$\zeta(\theta) = \frac{3}{2} x \ln x - \frac{x}{4} + \frac{1}{2} + \delta\zeta(\theta)$ with $x = \frac{1-\cos\theta}{2}$$
+
+where $\delta\zeta(\theta)$ from quantum gravity.
+
