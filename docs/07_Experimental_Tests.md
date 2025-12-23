@@ -612,3 +612,14 @@ Table A.1: Complete LHC predictions
 | $pp → χχ + j$ |	0.8 fb |  4σ |  300/fb |
 | Contact interactions |	- |  3σ |  300/fb |
 
+
+Table A.2: Cosmological parameters
+
+| Parameter |	ACT Prediction |	Current Measurement |	Tension |
+| :--- | :--- | :--- | :--- |
+| $H_0$ |	$67.8 \pm 0.5$ |	$67.4 \pm 0.5$ |	0.4σ |
+| $S_8$ |	$0.810 \pm 0.015$ |	$0.832 \pm 0.013$ |	1.1σ |
+| $n_s$ |	$0.965 \pm 0.004$ |	$0.9649 \pm 0.0042$ |	0.0σ |
+| $τ$ |	$0.054 \pm 0.008$ |	$0.054 \pm 0.007$ |	0.0σ |
+
+B. Statistical Methods
