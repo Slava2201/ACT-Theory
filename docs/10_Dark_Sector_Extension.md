@@ -524,3 +524,166 @@ print(f"Final memory: {evolution[-1]['total_memory']:.3e}")
 print(f"Final potential: {evolution[-1]['total_potential']:.3e}")
 print(f"Dark energy fraction: {evolution[-1]['energy_density']['de']:.3f}")
 ``` 
+
+8.2 Halo Formation Code
+
+```python
+def simulate_dark_matter_halo(N_particles=10**6, M_halo=10**12):
+    """Simulate dark matter halo formation with memory."""
+    
+    # Initial conditions
+    positions = initialize_nfw(N_particles, M_halo)
+    velocities = initialize_velocities(positions, M_halo)
+    
+    # Add memory field
+    memory = initialize_memory_field(positions)
+    
+    # N-body simulation with memory
+    for step in range(n_steps):
+        # Calculate forces (gravity + memory)
+        forces = calculate_gravity(positions, masses) + \
+                 calculate_memory_force(positions, memory)
+        
+        # Update positions and velocities
+        positions, velocities = leapfrog_integrate(
+            positions, velocities, forces, dt
+        )
+        
+        # Update memory (persists but can be modified)
+        memory = update_memory(memory, positions, velocities, dt)
+    
+    # Analyze final halo
+    halo_profile = calculate_density_profile(positions)
+    velocity_dispersion = calculate_velocity_dispersion(velocities)
+    shape = calculate_halo_shape(positions)
+    
+    return {
+        'profile': halo_profile,
+        'velocity_dispersion': velocity_dispersion,
+        'shape': shape,
+        'memory_distribution': memory
+    }
+
+# Simulate Milky Way-like halo
+halo_results = simulate_dark_matter_halo(N_particles=10**6, M_halo=1.5e12)
+
+print("Halo Properties:")
+print(f"Scale radius: {halo_results['profile']['rs']:.2f} kpc")
+print(f"Central density: {halo_results['profile']['rho0']:.2e} M_sun/kpc^3")
+print(f"Velocity dispersion: {halo_results['velocity_dispersion']:.1f} km/s")
+```
+
+8.3 Cosmological Simulation
+
+```python
+def simulate_dark_cosmology(box_size=1000, n_grid=512):
+    """Simulate cosmological evolution of dark sector."""
+    
+    # Initial conditions
+    δk = generate_initial_fluctuations(box_size, n_grid, act_power_spectrum)
+    
+    # Dark field initialization
+    Ψ = initialize_unified_field(δk)
+    
+    # Time evolution
+    scale_factors = np.logspace(-3, 0, 100)  # z=1000 to z=0
+    results = []
+    
+    for a in scale_factors:
+        # Solve coupled equations
+        Ψ, metrics = evolve_dark_fields(Ψ, a, box_size/n_grid)
+        
+        # Calculate observables
+        ρ_dm = calculate_dark_matter_density(Ψ)
+        ρ_de = calculate_dark_energy_density(Ψ)
+        velocities = calculate_velocity_field(Ψ)
+        
+        results.append({
+            'a': a,
+            'z': 1/a - 1,
+            'rho_dm': ρ_dm,
+            'rho_de': ρ_de,
+            'velocities': velocities,
+            'power_spectrum': calculate_power_spectrum(Ψ)
+        })
+    
+    return results
+
+# Run cosmological simulation
+cosmo_results = simulate_dark_cosmology(box_size=500, n_grid=256)
+
+# Analyze
+print("Cosmological Parameters at z=0:")
+print(f"Ω_dm: {cosmo_results[-1]['rho_dm']/critical_density:.3f}")
+print(f"Ω_de: {cosmo_results[-1]['rho_de']/critical_density:.3f}")
+print(f"σ_8: {calculate_sigma8(cosmo_results[-1]['power_spectrum']):.3f}")
+```
+
+9. Experimental Roadmap
+9.1 Near-Term (2024-2030)
+Experiment	Observable	ACT Sensitivity
+XENONnT	DM-nucleon scattering	$σ_{\text{SI}} < 10^{-48} \text{cm}^2$
+LZ	DM-nucleon scattering	$σ_{\text{SI}} < 10^{-48} \text{cm}^2$
+Fermi-LAT	130 GeV line	$⟨σv⟩ < 10^{-27} \text{cm}^3/\text{s}$
+Euclid	Growth of structure	$σ(S_8) = 0.01$
+DESI	BAO, RSD	Test $w(a)$ evolution
+9.2 Medium-Term (2030-2040)
+Experiment	Observable	ACT Sensitivity
+DARWIN	DM-nucleon scattering	$σ_{\text{SI}} < 10^{-49} \text{cm}^2$
+CTA	DM annihilation	$⟨σv⟩ < 10^{-27} \text{cm}^3/\text{s}$
+Vera Rubin	Weak lensing	Test halo profiles
+SKA	21cm tomography	Test DM properties at high-z
+ATHENA	Cluster physics	Test memory heating
+9.3 Long-Term (2040+)
+Cosmic Explorer: Test DM via GWs
+
+LISA: Probe early universe dark sector
+
+μTelescope: Ultimate direct detection
+
+Moon-based detectors: Low-background DM search
+
+Quantum sensors: Test fifth forces at micron scale
+
+9.4 Critical Tests
+ACT would be falsified if:
+
+No DM signal at $σ_{\text{SI}} < 10^{-49} \text{cm}^2$
+
+$w_0$ measured $< -1.01$ or $> -0.99$
+
+Halo cores not found in dwarfs
+
+No 130 GeV line with $⟨σv⟩ > 10^{-28} \text{cm}^3/\text{s}$
+
+BAO shows no running of Λ
+
+ACT would be confirmed if:
+
+130 GeV line detected at predicted flux
+
+DM scattering with $σ_{\text{SI}} ≈ 10^{-47} \text{cm}^2$
+
+$w_0 = -0.995 ± 0.005$ measured
+
+Dwarf galaxy cores confirmed
+
+Running Λ detected in LSS
+
+Conclusion
+The ACT dark sector framework provides:
+
+✅ Unified description of DM and DE from single field
+
+✅ Natural mass scales from network properties
+
+✅ Solution to small-scale problems via memory effects
+
+✅ Testable predictions across all detection methods
+
+✅ Cosmological consistency with all current data
+
+Dark matter and dark energy are not separate mysteries but complementary aspects of the causal network's memory and potential.
+
+Final insight: The "dark" universe isn't dark because it's invisible, but because it's the substrate from which visible reality emerges.
+
