@@ -69,15 +69,15 @@ where:
 
 **Persistent Memory (Cold DM):**
 
-$ M_P(x) = \sum_{\text{stable loops}} e^{-A_{\text{loop}} / A_0} $
+$$ M_P(x) = \sum_{\text{stable loops}} e^{-A_{\text{loop}} / A_0} $$
 
 **Working Memory (Warm DM):**
 
-$ M_W(x) = \sum_{\text{recent chains}} e^{-\tau / \tau_W} $
+$$ M_W(x) = \sum_{\text{recent chains}} e^{-\tau / \tau_W} $$
 
 **Cache Memory (Hot DM remnants):**
 
-$ M_C(x) = \sum_{\text{frequent patterns}} f_{\text{pattern}} $
+$$ M_C(x) = \sum_{\text{frequent patterns}} f_{\text{pattern}} $$
 
 
 ### 2.3 Memory Field Equations
