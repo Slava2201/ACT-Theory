@@ -66,23 +66,19 @@ where:
 
 **Three memory types** correspond to three dark matter components:
 
-1. **Persistent Memory** (Cold DM):
 
-   $$
-   M_P(x) = \sum_{\text{stable loops}} e^{-A_{\text{loop}}/A_0}
-   $$
+**Persistent Memory (Cold DM):**
 
-3. **Working Memory** (Warm DM):
+$ M_P(x) = \sum_{\text{stable loops}} e^{-A_{\text{loop}} / A_0} $
 
-   $$
-   M_W(x) = \sum_{\text{recent chains}} e^{-τ/τ_W}
-   $$
+**Working Memory (Warm DM):**
 
-5. **Cache Memory** (Hot DM remnants):
+$ M_W(x) = \sum_{\text{recent chains}} e^{-\tau / \tau_W} $
 
-   $$
-   M_C(x) = \sum_{\text{frequent patterns}} f_{\text{pattern}}
-   $$
+**Cache Memory (Hot DM remnants):**
+
+$ M_C(x) = \sum_{\text{frequent patterns}} f_{\text{pattern}} $
+
 
 ### 2.3 Memory Field Equations
 
@@ -262,7 +258,7 @@ Memory formation history varies → different halo profiles.
 - Polarization B-modes from dark sector vector modes
 
 **Large-scale structure**:
-- Matter power spectrum suppression at $k > 10 \ h/$Mpc
+- Matter power spectrum suppression at $k > 10 \ h/$ Mpc
 - Modified BAO peak positions
 - Redshift-space distortions affected by memory drag
 
