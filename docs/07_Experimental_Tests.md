@@ -597,3 +597,18 @@ ACT would be strongly supported if:
 
 2040+: Precision tests with next-generation experiments
 
+---
+
+Appendices
+
+A. Prediction Tables
+
+Table A.1: Complete LHC predictions
+
+| Process |	Cross Section |	Significance |	Luminosity Needed |
+| :--- | :--- | :--- | :--- |
+| $pp → Z' → ℓ⁺ℓ⁻$ | 1.2 fb |  5σ |	 300/fb |
+| $pp → G^* → γγ$ |	0.3 fb |  3σ |	300/fb |
+| $pp → χχ + j$ |	0.8 fb |  4σ |  300/fb |
+| Contact interactions |	- |  3σ |  300/fb |
+
