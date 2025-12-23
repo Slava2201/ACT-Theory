@@ -543,3 +543,57 @@ def calculate_significance(prediction, data, method='frequentist'):
 | LISA |	Primordial GWs |	$r > 10^{-5}$ |
 | Vera Rubin |	Transients, lensing |	Test ACT modifications |
 | Hyper-K |	Proton decay |	$τ_p > 10^{35}$ yr |
+
+---
+
+8.3 Long-Term (2040+)
+
+Cosmic Explorer: Ultimate GW observatory
+
+μTelescope: $μ → eγ$ to $10^{-16}$
+
+ATHENA: X-ray tests of quantum gravity
+
+IceCube-Gen2: Neutrino tests at EeV scale
+
+SKA: 21cm cosmology at all redshifts
+
+
+9. Falsifiability Criteria
+
+9.1 Critical Tests
+
+ACT would be falsified if:
+
+1. No $Z'$ is found at FCC up to 30 TeV
+
+2. No GW echoes are detected with $α > 0.05$ at ET
+
+3. $r > 0.01$ is measured at CMB-S4
+
+4. $S_8$ tension increases beyond $3σ$ with Euclid
+
+5. Lorentz violation is excluded at level $ξ < 0.5$
+
+9.2 Success Criteria
+
+ACT would be strongly supported if:
+
+1. $Z'$ discovery at $M ≈ 3.5$ TeV with predicted properties
+
+2. GW echoes detected with $Δt ≈ 0.3$ ms, $γ ≈ 0.8$
+
+3. $r ≈ 0.004$ measured at CMB-S4
+
+4. $S_8$ tension resolved at $1σ$ level
+
+5. Lorentz violation detected at predicted level
+
+9.3 Timeline for Verification
+
+2026-2030: Initial tests at LHC Run 3, LIGO O4
+
+2030-2040: Definitive tests at FCC, ET, CMB-S4
+
+2040+: Precision tests with next-generation experiments
+
