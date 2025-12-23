@@ -620,21 +620,29 @@ print(f"σ_8: {calculate_sigma8(cosmo_results[-1]['power_spectrum']):.3f}")
 ```
 
 9. Experimental Roadmap
-9.1 Near-Term (2024-2030)
-Experiment	Observable	ACT Sensitivity
-XENONnT	DM-nucleon scattering	$σ_{\text{SI}} < 10^{-48} \text{cm}^2$
-LZ	DM-nucleon scattering	$σ_{\text{SI}} < 10^{-48} \text{cm}^2$
-Fermi-LAT	130 GeV line	$⟨σv⟩ < 10^{-27} \text{cm}^3/\text{s}$
-Euclid	Growth of structure	$σ(S_8) = 0.01$
-DESI	BAO, RSD	Test $w(a)$ evolution
+
+9.1 Near-Term (2026-2030)
+
+| Experiment |	Observable |	ACT Sensitivity |
+| :--- | :--- | :--- |
+| XENONnT |	DM-nucleon scattering |	$σ_{\text{SI}} < 10^{-48} \text{cm}^2$ |
+| LZ |	DM-nucleon scattering |	$σ_{\text{SI}} < 10^{-48} \text{cm}^2$ |
+| Fermi-LAT |	130 GeV line |	$⟨σv⟩ < 10^{-27} \text{cm}^3/\text{s}$ |
+|Euclid |	Growth of structure |	$σ(S_8) = 0.01$ |
+|DESI |	BAO, RSD	Test | $w(a)$ evolution |
+
 9.2 Medium-Term (2030-2040)
-Experiment	Observable	ACT Sensitivity
-DARWIN	DM-nucleon scattering	$σ_{\text{SI}} < 10^{-49} \text{cm}^2$
-CTA	DM annihilation	$⟨σv⟩ < 10^{-27} \text{cm}^3/\text{s}$
-Vera Rubin	Weak lensing	Test halo profiles
-SKA	21cm tomography	Test DM properties at high-z
-ATHENA	Cluster physics	Test memory heating
+
+| Experiment |	Observable |	ACT Sensitivity |
+| :--- | :--- | :--- |
+| DARWIN |	DM-nucleon scattering |	$σ_{\text{SI}} < 10^{-49} \text{cm}^2$ |
+| CTA |	DM annihilation |	$⟨σv⟩ < 10^{-27} \text{cm}^3/\text{s}$ |
+| Vera Rubin |	Weak lensing |	Test halo profiles |
+| SKA |	21cm tomography |	Test DM properties at high-z |
+| ATHENA |	Cluster physics |	Test memory heating |
+
 9.3 Long-Term (2040+)
+
 Cosmic Explorer: Test DM via GWs
 
 LISA: Probe early universe dark sector
@@ -646,6 +654,7 @@ Moon-based detectors: Low-background DM search
 Quantum sensors: Test fifth forces at micron scale
 
 9.4 Critical Tests
+
 ACT would be falsified if:
 
 No DM signal at $σ_{\text{SI}} < 10^{-49} \text{cm}^2$
@@ -671,6 +680,7 @@ Dwarf galaxy cores confirmed
 Running Λ detected in LSS
 
 Conclusion
+
 The ACT dark sector framework provides:
 
 ✅ Unified description of DM and DE from single field
