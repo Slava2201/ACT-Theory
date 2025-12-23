@@ -489,3 +489,48 @@ $$\chi^2 = \sum_i \frac{(O_i^{\text{ACT}} - O_i^{\text{exp}})^2}{(\sigma_i^{\tex
 *   **$\chi^2$/dof:** 1.15
 *   **p-value:** 0.18
 *   **Bayes factor vs. ΛCDM:** 2.3 (positive evidence)
+
+
+7.3 Statistical Significance Calculator
+
+```python
+def calculate_significance(prediction, data, method='frequentist'):
+    """Calculate statistical significance of agreement."""
+    
+    if method == 'frequentist':
+        # χ2 test
+        χ2 = np.sum((prediction['value'] - data['value'])**2 / 
+                    (prediction['error']**2 + data['error']**2))
+        dof = len(prediction['value'])
+        p_value = chi2.sf(χ2, dof)
+        return {'χ2': χ2, 'dof': dof, 'p_value': p_value}
+    
+    elif method == 'bayesian':
+        # Bayes factor calculation
+        evidence_act = calculate_evidence(prediction, data)
+        evidence_null = calculate_evidence_null(data)
+        bayes_factor = evidence_act / evidence_null
+        return {'bayes_factor': bayes_factor}
+    
+    elif method == 'information_theoretic':
+        # AIC/BIC comparison
+        aic_act = calculate_aic(prediction, data)
+        aic_null = calculate_aic_null(data)
+        Δaic = aic_act - aic_null
+        return {'ΔAIC': Δaic}
+```
+
+8. Future Experiments
+
+8.1 Near-Term (2024-2030)
+
+| Experiment |	Observable |	ACT Sensitivity |
+| :--- | :--- | :--- |
+| HL-LHC | $Z'$ search | $5σ$ for $M_{Z'} < 5$ TeV |
+| LIGO O4 |	Echoes | $3σ$ for $α > 0.15$ |
+| CMB-S4 |	$r$, $n_s$ | $σ(r) = 0.001$, $σ(n_s) = 0.001$ |
+| Euclid |	$S_8$, growth |	$σ(S_8) = 0.01$ |
+| DUNE | $δ_{CP}$, mass hierarchy |	Determine with $5σ$ |
+
+
+8.2 Medium-Term (2030-2040)
