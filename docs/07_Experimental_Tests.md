@@ -534,3 +534,12 @@ def calculate_significance(prediction, data, method='frequentist'):
 
 
 8.2 Medium-Term (2030-2040)
+
+
+| Experiment |	Observable |	ACT Sensitivity |
+| :--- | :--- | :--- |
+| FCC |	$Z'$, $G^*$ |	$M < 30$ TeV |
+| Einstein Telescope |	Quantum gravity in GWs |	$ξ < 0.1$ |
+| LISA |	Primordial GWs |	$r > 10^{-5}$ |
+| Vera Rubin |	Transients, lensing |	Test ACT modifications |
+| Hyper-K |	Proton decay |	$τ_p > 10^{35}$ yr |
