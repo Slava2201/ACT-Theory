@@ -623,3 +623,17 @@ Table A.2: Cosmological parameters
 | $τ$ |	$0.054 \pm 0.008$ |	$0.054 \pm 0.007$ |	0.0σ |
 
 B. Statistical Methods
+
+B.1 Bayesian Evidence Calculation
+
+The evidence for model $M$ given data $D$:
+
+### 7.3 Bayesian Evidence
+
+Model evidence (marginal likelihood):
+
+$$p(D \mid M) = \int p(D \mid \theta, M) \, p(\theta \mid M) \, d\theta$$
+
+Bayes factor comparing ACT ($M_1$) and ΛCDM ($M_2$):
+
+$$B_{12} = \frac{p(D \mid M_1)}{p(D \mid M_2)}$$
