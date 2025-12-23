@@ -306,3 +306,5 @@ By starting from the fundamental principle of causality and building upward, ACT
 "The order of time is not in time itself, but in the causal relations between events." — ACT Principle
 
 Next: Mathematical Foundations →
+
+
