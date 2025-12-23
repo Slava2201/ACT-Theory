@@ -287,8 +287,11 @@ At $z = 0.5$: $\Delta r_d / r_d = -0.0002$.
 
 
 5. Laboratory Tests
+
 5.1 Tests of Lorentz Invariance
+
 5.1.1 SME Coefficients
+
 Standard Model Extension parameters:
 
 | Coefficient |	ACT Prediction | Current Limit |
@@ -366,6 +369,7 @@ For GRB at $z = 1$, $D = 6.6$ Gpc:
 
 
 6.1.2 Spectral Features
+
 Absorption features:
 
 $$\frac{dN}{dE} = N_0 E^{-\Gamma} \exp\left[ -\tau(E) \right]$$
@@ -637,3 +641,54 @@ $$p(D \mid M) = \int p(D \mid \theta, M) \, p(\theta \mid M) \, d\theta$$
 Bayes factor comparing ACT ($M_1$) and ΛCDM ($M_2$):
 
 $$B_{12} = \frac{p(D \mid M_1)}{p(D \mid M_2)}$$
+
+
+B.2 Model Comparison Criteria
+
+AIC: $AIC = 2k - 2\ln\mathcal{L}$
+
+BIC: $BIC = k\ln n - 2\ln\mathcal{L}$
+
+DIC: Deviance Information Criterion
+
+WAIC: Watanabe-Akaike Information Criterion
+
+C. Experimental Signatures
+
+C.1 Characteristic Signals
+
+Combined fit of all predictions gives better $χ^2$ than piecewise
+
+Correlations between different observables
+
+Energy dependence of deviations follows ACT prediction
+
+Redshift evolution of cosmological parameters specific to ACT
+
+C.2 Smoking Guns
+
+Simultaneous discovery of $Z'$ and GW echoes
+
+Specific pattern in CMB anomalies
+
+Energy-dependent speed of light from multi-messenger astronomy
+
+Modified growth of structure with specific scale dependence
+
+Conclusion
+
+ACT makes specific, quantitative predictions across the full spectrum of physics:
+
+✅ Particle physics: New resonances at specific masses
+
+✅ Gravitational waves: Echoes with predicted timing
+
+✅ Cosmology: Resolution of tensions with specific parameters
+
+✅ Laboratory tests: Lorentz violation at predicted level
+
+✅ Astrophysics: Energy-dependent effects in GRBs
+
+The theory is highly testable with current and near-future experiments, with clear falsifiability criteria. A comprehensive data analysis pipeline allows for rigorous statistical comparison with data.
+
+Next: Philosophical Implications →
