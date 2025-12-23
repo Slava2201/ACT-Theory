@@ -477,3 +477,15 @@ print(f"χ²/dof = {global_fit_result['χ2/dof']:.2f}")
 print(f"p-value = {global_fit_result['global_p_value']:.3f}")
 print(f"Agreement: {global_fit_result['agreement_level']}")
 ```
+
+
+### 7.2 Likelihood Analysis
+For each observable $O_i$ with prediction $O_i^{\text{ACT}} \pm \sigma_i^{\text{ACT}}$ and measurement $O_i^{\text{exp}} \pm \sigma_i^{\text{exp}}$:
+
+$$\chi^2 = \sum_i \frac{(O_i^{\text{ACT}} - O_i^{\text{exp}})^2}{(\sigma_i^{\text{ACT}})^2 + (\sigma_i^{\text{exp}})^2}$$
+
+**Current status (preliminary):**
+*   **Number of tests:** 127
+*   **$\chi^2$/dof:** 1.15
+*   **p-value:** 0.18
+*   **Bayes factor vs. ΛCDM:** 2.3 (positive evidence)
