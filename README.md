@@ -242,7 +242,7 @@ The author expresses deep and sincere gratitude to all who accompanied this jour
 
 Maksim Dmitrievich Fitkevich (MIPT) — for invaluable mentorship. His demand for rigor, his call to describe the Lagrangian, and, most importantly, his search for the nonlocality operator, became defining factors. This forced the author to find a mathematical justification for quantum correlations within the framework of ACT geometry.
 
-Aleksei Nikolaevich Prots (FTF KubSU) — for his invaluable contribution to the mathematical apparatus. Thanks to him, the author discovered Lie algebras and Clifford bundles. His critical analysis helped overcome the stage of numerology and move to the rigorous geometry of octants.
+Aleksei Nikolaevich Prots (FTF KubSU) — for his invaluable contribution to the mathematical apparatus. Thanks to him, the author discovered Lie algebras and Clifford bundles. His guidance on the analysis of Dirac operator spectra within the framework of Renormalization Group (RG) flows became a cornerstone of the theory, enabling the derivation of fundamental constants from first principles. His critical analysis helped overcome the stage of numerology and move to the rigorous geometry of octants.
 
 Mikhail Yurievich Fedunov (BNTU) — for uncompromising and fundamental criticism. His deep immersion into the world of physical constants became the "tough nut" in the struggle with which the theory gained its final stability and precision.
 
