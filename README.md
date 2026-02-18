@@ -204,6 +204,66 @@ The theory is falsified if:
 
 ### Installation
 
+Running Simulations
+bash
+python src/run_experiment.py
+This will simulate the causal network and output the predicted $\alpha^{-1}$ value.
+
+Compiling the Document
+bash
+cd docs
+pdflatex ACT_Theory.tex
+bibtex ACT_Theory
+pdflatex ACT_Theory.tex
+pdflatex ACT_Theory.tex
+📚 References
+Schroeder, J. (n.d.). Science and the Bible: An Irresolvable Contradiction or Harmony?
+
+Habr: ACT — a theory of everything?
+
+Wikipedia: Causality (physics)
+
+GitHub: Slava2201/ACT-Theory
+
+Physics Stack Exchange: Dirac operator index
+
+Habr: Spacetime geometry in ACT
+
+Wikipedia: Fine-structure constant
+
+Britannica: Fine-structure constant
+
+YouTube: Dirac operator index and topology
+
+Spravochnik: Creationism
+
+🙏 Acknowledgments
+The author expresses deep and sincere gratitude to all who accompanied this journey:
+
+Maksim Dmitrievich Fitkevich (MIPT) — for invaluable mentorship. His demand for rigor, his call to describe the Lagrangian, and, most importantly, his search for the nonlocality operator, became defining factors. This forced the author to find a mathematical justification for quantum correlations within the framework of ACT geometry.
+
+Aleksei Nikolaevich Prots (FTF KubSU) — for his invaluable contribution to the mathematical apparatus. Thanks to him, the author discovered Lie algebras and Clifford bundles. His critical analysis helped overcome the stage of numerology and move to the rigorous geometry of octants.
+
+Mikhail Yurievich Fedunov (BNTU) — for uncompromising and fundamental criticism. His deep immersion into the world of physical constants became the "tough nut" in the struggle with which the theory gained its final stability and precision.
+
+Yuri Sergeevich Sautenkin (PTK named after N.I. Putilov) — for his genuine curiosity and courage in studying quantum mechanics, which served as an important emotional stimulus for completing the work.
+
+My son Evgeny Vyacheslavovich Potapov — for his endless faith and support.
+
+Technical support in manuscript preparation:
+Drafts and program code — neural network DeepSeek.
+Technical editing, structure, and formatting — digital assistant MIA (iMe AI).
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📬 Contact
+For questions, suggestions, or collaboration opportunities, please open an issue on GitHub or contact the author directly.
+
+Keywords: Algebraic Causality Theory, Dirac operator, topological index, dark energy, fine structure constant, quantum gravity, Standard Model, octant model, causal hypergraph
+
+DOI: 10.5281/zenodo.1234567
+
 ```bash
 git clone https://github.com/Slava2201/ACT-Theory.git
 cd ACT-Theory
