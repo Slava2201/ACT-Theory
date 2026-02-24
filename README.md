@@ -6,8 +6,8 @@ This repository provides a professional implementation of the **ACT Theory** for
 
 Below is the result of the simulation showing the energy spectrum, running alpha, and the universal energy budget calculated across 8 octants.
 
-![ACT Universe Profile](uni<img width="1355" height="836" alt="universe_profile_L14" src="https://github.com/user-attachments/assets/e549cc78-25c2-48f2-8e98-b9b73ce414cf" />
-verse_profile_L14.png)
+ width="1355" height="836" alt="universe_profile_L14" src="https://github.com/user-attachments/assets/e549cc78-25c2-48f2-8e98-b9b73ce414cf" />
+
 
 ### Key Results:
 *   **Energy Spectrum:** Symmetric resonance distribution confirming the vacuum stability in the 8-octant model.
