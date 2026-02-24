@@ -1,183 +1,182 @@
-markdown
-# Algebraic Causality Theory (ACT)
 
-[![arXiv](https://img.shields.io/badge/arXiv-2402.xxxxx-b31b1b.svg)](https://arxiv.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxxx)
 
-**Algebraic Causality Theory (ACT)** is a candidate for a theory of everything in which **causality emerges as the primary concept**. This repository contains the LaTeX source for the foundational paper deriving the fine structure constant, the nature of dark energy, and the origin of dark matter from the geometry of causal hypergraphs.
+```markdown
+# Алгебраическая Каузальная Теория (АКТ) / Algebraic Causality Theory (ACT)
 
-## 📜 Abstract
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
-This work presents a systematic exposition of the mathematical apparatus of Algebraic Causality Theory (ACT) — a candidate for a theory of everything in which causality emerges as the primary concept. The first part provides a detailed analysis of the Dirac operator spectrum within the octant model, its connection to fermion mass hierarchies, and the number of generations through the topological index. The second part is devoted to cosmological consequences: topological modes between light cones are interpreted as dark energy, and stable topological defects at the joints between octants are interpreted as dark matter. This unified geometrical origin allows for a simultaneous derivation of their densities. The culmination of this work is the refined derivation of the fine structure constant α⁻¹ = 137.042 ± 0.085 from the first principles of causal hypergraph dynamics, now incorporating the dark matter contribution. This value coincides with the experimental value to within 0.004% accuracy, demonstrating the exceptional predictive power of ACT.
+**Алгебраическая Каузальная Теория (АКТ)** — кандидат на теорию всего, в которой причинность (отношение «раньше-позже») выступает первичным понятием. Пространство-время, квантовые поля и законы физики возникают как статистические регулярности в сети причинных отношений (причинном гиперграфе).
 
-## 🔬 Key Results
+Данный репозиторий содержит материалы, посвященные математическому аппарату АКТ, включая:
+- Спектральный анализ оператора Дирака в модели октантов.
+- Топологическое происхождение тёмной энергии и тёмной материи.
+- Вывод фундаментальных констант (постоянная тонкой структуры α) из первых принципов.
+- Связь наблюдаемой космологии с геометрией причинной сети.
 
-### Fundamental Constants
-| Quantity | ACT Prediction | Experimental Value | Accuracy |
-|----------|---------------|-------------------|----------|
-| α⁻¹ (fine structure) | **137.042 ± 0.085** | 137.036 | **0.004%** |
-| Ω_DM h² (dark matter) | **0.119** | 0.120 ± 0.001 | < 1% |
-| ρ_Λ (dark energy) | **2.75 × 10⁻¹¹ eV⁴** | 2.80 × 10⁻¹¹ eV⁴ | < 2% |
+## 📄 Основные результаты
 
-### Core Theoretical Concepts
+### 🧬 Микрофизика и спектр оператора Дирака
+В модели восьми октантов, исходящих из центральной точки (конденсата φ₀), оператор Дирака принимает вид:
 
-#### 1. Dirac Operator in Octant Structure
 ```math
 D_i = \gamma^\mu \nabla_\mu^{(i)} + m_i, \quad \nabla_\mu^{(i)} = \partial_\mu + ig_i A_\mu^a T^a + \Gamma_\mu
-2. Topological Index and Fermion Generations
-math
-\operatorname{ind}(D) = n_+ - n_- = 3
-The global index of the Dirac operator on the octant network naturally yields three fermion generations.
+```
 
-3. Dark Energy as Topological Modes
-Dark energy emerges from topological modes localized between light cones:
+- **Три поколения фермионов** возникают из топологического индекса:  
+  `ind(D) = n₊ - n₋ = ±3`
+- **Массовые иерархии** определяются спектральным потоком и RG-эволюцией.
+- **Нулевые моды** соответствуют безмассовым частицам (фотон, глюон).
 
-math
-\rho_\Lambda \sim \sum_{k\in \Delta \mathcal{H}} |\lambda_k|^2 \approx 2.75 \times 10^{-11} \text{ eV}^4, \quad w \approx -1
-4. Dark Matter as Topological Defects
-Dark matter emerges from stable topological defects at the joints between octants:
+### 🌌 Космология: тёмная энергия и тёмная материя
+- **Тёмная энергия** — топологические моды между световыми конусами.  
+  Плотность энергии:  
+  ```math
+  \rho_\Lambda \sim \frac{\hbar c}{L^4} \cdot |\text{ind}_{\text{global}}(D)| \approx 2.75 \times 10^{-11}\ \text{эВ}^4
+  ```
+  Параметр состояния `w ≈ -1` (стабильность топологических дефектов).
 
-math
-\rho_{\mathrm{DM}} \sim \sum_{\langle ij \rangle} \frac{E_{\mathrm{defect}}^{(ij)}}{V_{\mathrm{causal}}} \approx \alpha^{3/2} \rho_{Pl} \quad \Rightarrow \quad \Omega_{\mathrm{DM}}h^2 = 0.119
-5. Fine Structure Constant Derivation
-The key result incorporating both dark energy and dark matter contributions:
+- **Тёмная материя** — стабильные топологические дефекты на границах между октантами (субспинор прошлого `ℂ⁴₋`).  
+  Действие Черна-Саймонса на границах:  
+  ```math
+  S_{\text{CS}} = \frac{k}{4\pi} \int_{\Gamma_{ij}} \text{Tr}\left( A \wedge dA + \frac{2}{3} A \wedge A \wedge A \right)
+  ```
+  Плотность: `ΩDMh² ≈ 0.119` (совпадает с данными Planck).
 
-math
-\alpha_{\mathrm{ACT}}^{-1} = \underbrace{136.7}_{\text{pure geometry}} + \underbrace{0.342}_{\text{DM defects}} \pm 0.085 = 137.042 \pm 0.085
-📁 Repository Structure
-text
-ACT-Theory/
-├── 📄 README.md                 # This file
-├── 📄 act_paper.tex             # Main LaTeX source
-├── 📄 act_paper.pdf              # Compiled paper
-├── 📂 figures/                   # Generated figures
-├── 📂 simulations/               # Numerical simulation code
-│   ├── dirac_spectrum.py         # Dirac spectrum calculator
-│   ├── rg_flow.py                # Renormalization group solver
-│   └── dark_matter_density.py    # DM density from defect networks
-└── 📂 references/                # Bibliography and related papers
-🚀 Getting Started
-Prerequisites
-LaTeX distribution (TeX Live 2023+ or MiKTeX)
+### ⚛️ Постоянная тонкой структуры α
+**Ключевое предсказание теории** (уточнённое с учётом тёмной материи):
 
-Python 3.9+ (for simulations)
+```math
+\alpha^{-1} = 137.042 \pm 0.085
+```
 
-Required Python packages: numpy, scipy, matplotlib, pandas
+Расхождение с экспериментальным значением (`1/137.0361`) составляет **всего 0.004%**.  
+Этот результат достигается за счёт комбинированной топологической стабилизации:
+- Объёмные моды → поколения фермионов.
+- Граничные дефекты (ТМ) → точная настройка α.
 
-Compiling the Paper
-bash
+### 📊 Связи α с другими константами
+| Константа | Формула связи в АКТ | Интерпретация |
+|-----------|---------------------|----------------|
+| g₁ | α = g₁²/4π · cos²θ_W | ЭМ константа связи |
+| M_Pl | M_Pl/m_e ∼ α² exp(-1/2α) | Иерархия масс |
+| ρ_Λ | ρ_Λ ∼ α³ ρ_Pl | Плотность тёмной энергии |
+| ΩDMh² | Ωh² ≈ 1/√α · ρ_Λ/ρ_crit | Параметр плотности ТМ |
+| δT/T | δT/T ∼ α · (H₀/M_Pl)^{1/2} | Анизотропии РМФ |
+
+Полная таблица связей приведена в разделе 8.5 статьи.
+
+## 🧭 Структура репозитория
+
+```
+.
+├── README.md               # Этот файл
+├── article/                 # Исходники статьи (LaTeX)
+│   ├── main.tex
+│   ├── sections/
+│   └── figures/
+├── src/                     # Вспомогательный код (Python/Mathematica)
+│   ├── spectral_analysis/   # Вычисление спектра оператора Дирака
+│   ├── rg_flow/             # РГ-потоки и фиксированные точки
+│   └── topology/            # Индекс Дирака и классы Черна
+├── data/                    # Таблицы численных результатов
+└── docs/                    # Дополнительная документация
+```
+
+## 🚀 Как использовать
+
+### Воспроизведение численных результатов
+```bash
 git clone https://github.com/yourusername/ACT-Theory.git
-cd ACT-Theory
-pdflatex act_paper.tex
-bibtex act_paper
-pdflatex act_paper.tex
-pdflatex act_paper.tex
-Running Simulations
-bash
-cd simulations
-python dirac_spectrum.py --octants 8 --resolution 0.01
-python dark_matter_density.py --coupling 0.007297 --output dm_density.dat
-🔗 Key Relations of α in ACT
-Constant/Parameter	Relation Formula	ACT Value
-Electromagnetic coupling	α = g₁²/4π · cos²θ_W	1/137.042
-Planck mass hierarchy	M_Pl/m_e ~ α² exp(-1/2α)	~10²²
-Dark energy density	ρ_Λ ~ α³ ρ_Pl	2.75×10⁻¹¹ eV⁴
-Dark matter density	ρ_DM ~ α³/² ρ_Pl	Ω_DMh² = 0.119
-Hubble parameter	H₀ ~ α³/² H_Pl	67.8 km/s/Mpc
-Electron mass	m_e ~ α² m_W	0.511 MeV
-Neutrino mass	m_νᵢ ~ α³v²/M_Pl	~0.05 eV
-🧪 Experimental Tests and Falsifiability
-ACT makes several testable predictions:
+cd ACT-Theory/src
+python spectral_analysis/octant_spectrum.py --L 1.0 --m 0.1
+```
 
-Heavy fermion resonances at the Λ_ACT ~ 10¹⁶ GeV scale
+### Компиляция статьи (LuaLaTeX)
+```bash
+cd article
+lualatex main.tex
+biber main
+lualatex main.tex
+```
 
-Dark energy anisotropies δρ_Λ/ρ_Λ ~ 10⁻⁵ in CMB
+## 📚 Ключевые математические структуры
 
-Vacuum oscillations with frequencies f ~ 10⁻¹⁸ — 10⁻¹⁶ Hz
+| Математическая структура | Физическая интерпретация |
+|--------------------------|---------------------------|
+| Хронон τ ∈ ℂ⁴₊ ⊗ ℂ⁴₋ ⊗ ℂ | Элементарное событие (причина + память + скаляр) |
+| Гиперграф G = (V,E) | Сеть причинных связей |
+| Индекс Дирака ind(D) | Число поколений фермионов |
+| Голономия U_γ | Калибровочные поля (СМ) |
+| Граничные дефекты φ_τ | Плотность тёмной материи ΩDM |
 
-Correlation scale in large-scale structure ξ_corr ~ 100 Mpc from octant network
+## 🔬 Экспериментальные предсказания
 
-Evolution of α(z) with variation parameter ε ~ 10⁻⁶
+1. **Анизотропии тёмной энергии:** δρ_Λ/ρ_Λ ∼ 10⁻⁵ (CMB, не-гауссовы особенности).
+2. **Осцилляции вакуума:** Частоты f ∼ 10⁻¹⁸–10⁻¹⁶ Гц (LIGO/Virgo).
+3. **Тёмная материя как дефекты:** Самовзаимодействующая компонента с масштабом корреляции ∼ 100 Мпк (Euclid, DES).
+4. **Тяжёлые фермионы:** Моды на масштабе Λ_ACT ∼ 10¹⁶ ГэВ.
+5. **Эволюция w(z):** Отклонение от ΛCDM (LSST, Roman).
 
-The theory is falsified if:
+## ✅ Критерии фальсификации
 
-RG coefficients deviate from G_oct predictions (α_s(M_Z) ≠ 0.118)
+Теория опровергается, если:
+- RG-поток **с учётом тёмного сектора** не даёт наблюдаемых g_i.
+- Число поколений ≠ 3 (ind(D) ≠ ±3).
+- δρ_Λ/ρ_Λ > 10⁻⁴.
+- Не обнаружены корреляции ТМ/барионов на малых масштабах.
+- ГВ-детекторы не видят предсказанных осцилляций.
 
-Number of fermion generations ≠ 3 (requires ind(D) = ±3)
+## 📖 Цитирование
 
-Dark energy anisotropies exceed δρ_Λ/ρ_Λ < 10⁻⁴
+Если вы используете материалы этого репозитория в своей работе, пожалуйста, цитируйте препринт:
 
-📚 Core Mathematical Framework
-Causal Hypergraph
-A causal hypergraph Γ = (V, E) where V are chronons (elementary events) and E are hyperedges (causal relations).
-
-Chronon Algebra
-math
-\{\delta_i^\alpha, \delta_i^{\alpha+1}\}_+ = 0 \pmod{4}, \quad (\delta_i^\alpha)^\dagger = \delta_i^{\alpha+2} \pmod{4}
-math
-\mathcal{A}_\tau \cong \mathfrak{su}(4) \oplus \mathfrak{u}(1) \cong \text{Standard Model symmetries}
-Lindblad Dynamics
-math
-\frac{d}{dt}\rho = \mathcal{L}[\rho] = \sum_{\tau \in E}\sum_{e\in \partial \tau}(\Phi_{e,\tau}(\rho) - \rho) + i[\hat{H}_\Gamma, \rho]
-📖 How to Cite
-If you use ACT in your research, please cite:
-
-bibtex
+```bibtex
 @article{Potapov2026ACT,
-  title     = {Algebraic Causality Theory (ACT): From the Dirac Operator Spectrum to the Nature of Dark Energy, Dark Matter, and Fundamental Constants},
-  author    = {Potapov, V. N.},
-  journal   = {arXiv preprint},
-  year      = {2026},
-  volume    = {2402.xxxxx},
-  note      = {Accuracy of $\alpha^{-1}$: 0.004\%}
+  title={Алгебраическая Каузальная Теория (АКТ): 
+         От Спектра Оператора Дирака к Природе Тёмной Энергии, 
+         Тёмной Материи и Фундаментальных Констант},
+  author={Потапов, В.Н.},
+  journal={arXiv preprint},
+  year={2026},
+  volume={XXXX.XXXXX}
 }
+```
 
-@software{potapov2026actcode,
-  author    = {Potapov, V. N.},
-  title     = {{ACT-Theory: Algebraic Causality Theory simulation suite}},
-  year      = {2026},
-  publisher = {GitHub},
-  url       = {https://github.com/yourusername/ACT-Theory}
-}
-🤝 Contributing
-We welcome contributions! Please see CONTRIBUTING.md for guidelines.
+## 🤝 Благодарности
 
-Areas for contribution:
+Автор выражает глубокую благодарность:
+- **Максиму Дмитриевичу Фиткевичу** (МФТИ) — за требование строгости и поиск оператора нелокальности.
+- **Алексею Николаевичу Проку** (ФТФ КубГУ) — за вклад в математический аппарат (алгебры Ли, расслоения Клиффорда, RG-потоки).
+- **Михаилу Юрьевичу Федунову** (БНТУ) — за бескомпромиссную критику и помощь в калибровке констант.
+- **Юрию Сергеевичу Саутенкину** (ПТК им. Н.И. Путилова) — за интерес и мужество в изучении квантовой механики.
+- **Евгению Вячеславовичу Потапову** — за веру и поддержку.
 
-Numerical simulations of octant network dynamics
+**Техническая поддержка:**  
+Черновики и программный код — нейронная модель DeepSeek.  
+Техническое редактирование, структура и оформление в системе LaTeX — цифровой ассистент MIA (iMe AI).
 
-RG flow calculations with dark matter back-reaction
+## 📜 Лицензия
 
-Experimental constraints on α(z) evolution
+Материалы распространяются под лицензией [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-Connections to string theory and loop quantum gravity
+## 📬 Контакты
 
-📧 Contact
-Author: V. N. Potapov
+По всем вопросам и предложениям:  
+В.Н. Потапов — [email@example.com](mailto:email@example.com)  
+Либо через [Issues](https://github.com/yourusername/ACT-Theory/issues) данного репозитория.
 
-Email: [your-email@domain.com]
+---
 
-Discussions: GitHub Discussions
+**Ключевые слова:** причинность, оператор Дирака, тёмная энергия, тёмная материя, постоянная тонкой структуры, ренормализационная группа, индекс Атьи-Зингера, гиперграф, алгебра Клиффорда, теория всего.
+```
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
-The author expresses deep gratitude to:
-
-Maksim Dmitrievich Fitkevich (MIPT) — for invaluable mentorship
-
-Aleksei Nikolaevich Prots (FTF KubSU) — for contributions to the mathematical apparatus
-
-Mikhail Yurievich Fedunov (BNTU) — for fundamental criticism
-
-Yuri Sergeevich Sautenkin (PTK named after N.I. Putilov) — for curiosity and support
-
-Evgeny Vyacheslavovich Potapov — for endless faith and support
-
-Technical support: Neural network DeepSeek (drafts), MIA (iMe AI) (LaTeX formatting)
-
-⭐ Star this repository if you find ACT interesting!
-
-Last updated: February 21, 2026
+Этот `README.md` содержит:
+1. **Краткое описание теории** и её основных идей.
+2. **Математические выкладки** в формате LaTeX (поддерживается GitHub).
+3. **Таблицы** с ключевыми результатами.
+4. **Структуру репозитория** для навигации.
+5. **Инструкции** по воспроизведению результатов.
+6. **Предсказания** и критерии фальсификации.
+7. **Благодарности** и информацию о цитировании.
