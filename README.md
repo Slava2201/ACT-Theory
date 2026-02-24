@@ -6,7 +6,7 @@ This repository provides a professional implementation of the **ACT Theory** for
 
 Below is the result of the simulation showing the energy spectrum, running alpha, and the universal energy budget calculated across 8 octants.
 
-![ACT Universe Profile](universe_profile_L14.png)<img width="1355" height="836" alt="universe_profile_L14" src="https://github.com/user-attachments/assets/b4c0df50-d529-4244-b277-73c3403616b9" />
+<img width="1355" height="836" alt="universe_profile_L14" src="https://github.com/user-attachments/assets/b4c0df50-d529-4244-b277-73c3403616b9" />
 
 
 ### Key Results:
