@@ -47,6 +47,7 @@ $$\alpha^{-1} = 137.035999...$$
 ### Reproducing Numerical Results (Python)
 
 
+<img width="1355" height="836" alt="universe_profile_L14" src="https://github.com/user-attachments/assets/fe99304b-b7a0-432d-8360-7a3d3ed7b22a" />
 
 ---
 
