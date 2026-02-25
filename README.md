@@ -7,7 +7,8 @@
 
 **A first-principles simulation framework for Algebraic Causality Theory - where causality is primary, and space-time, quantum fields, and physical laws emerge from causal hypergraph dynamics.**
 
-<img width="2250" height="1881" alt="132" src="https://github.com/user-attachments/assets/c52e8e2a-ec13-4194-b7da-bf922f341099" />
+<img width="1774" height="1181" alt="146" src="https://github.com/user-attachments/assets/80c7d643-458b-4277-be64-fc845b0fd2ba" />
+
 
 
 *Figure 1: ACT Ultra-High Resolution Dashboard showing energy spectrum, fine structure constant, and dark matter distribution*
