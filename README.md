@@ -9,9 +9,12 @@
 
 <img width="1774" height="1181" alt="146" src="https://github.com/user-attachments/assets/80c7d643-458b-4277-be64-fc845b0fd2ba" />
 
+<img width="1389" height="985" alt="135" src="https://github.com/user-attachments/assets/b77eecd4-8d36-4be9-95be-3b28850c1cbf" />
 
 
 *Figure 1: ACT Ultra-High Resolution Dashboard showing energy spectrum, fine structure constant, and dark matter distribution*
+
+
 
 ## 📋 Overview
 
