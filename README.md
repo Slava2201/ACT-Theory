@@ -46,5 +46,16 @@ The system exhibits **critical stability** at phase φ = 1.3π, where the raw da
 3. **Emergent Geometry**: Space-time emerges from the topology of the causal network
 4. **Algebraic Structure**: Each chronon lives in a 9-dimensional Hilbert space:
 
-```math
+
 \mathcal{H}_\tau \cong \mathbb{C}^4_+ \otimes \mathbb{C}^4_- \otimes \mathbb{C}
+Where:
+
+    ℂ⁴₊ - Future-directed causal connections (visible matter)
+
+    ℂ⁴₋ - Past-directed memory (dark matter)
+
+    ℂ - Scalar order parameter (Higgs field)
+
+Key Mathematical Relations
+
+Fine Structure Constant:
