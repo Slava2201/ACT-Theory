@@ -85,21 +85,17 @@ Lightweight version optimized for personal computers with adaptive resolution an
 | w (DE) | -1.02 ± 0.02 | -1.03 ± 0.03 | Consistent |
 | Generations | 3 | 3 | Exact |
 
-## 🔧 Mathematical Foundation
+### 🔳 Mathematical Foundation
 
 The core equation governing the Dirac operator in octant structure:
 
-```python
-# From Section 1 of paper
-D_i = γ^μ ∇_μ^(i) + m_i
-∇_μ^(i) = ∂_μ + ig_i A_μ^a T^a + Γ_μ
-```
+$$D_i = \gamma^\mu \nabla_\mu(i) + m_i$$
+$$\nabla_\mu(i) = \partial_\mu + ig_i A_\mu^a T^a + \Gamma_\mu$$
 
 The fine structure constant emerges from the topological stabilization:
 
-```python
-ind(D) = Σ_i ind_i + (1/2π) Σ_{⟨ij⟩} ∮_{Γ_ij} A_defect
-```
+$$ind(D) = \sum_i ind_i + \frac{1}{2\pi} \sum_{\{ij\}} \oint_{\Gamma_{ij}} A_{defect}$$
+
 
 ## 🌌 Physical Interpretation
 
