@@ -1,7 +1,7 @@
 # ACT Theory - Algebraic Causality Theory
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14789632.svg)](https://doi.org/10.5281/zenodo.14789632)
-[![arXiv](https://img.shields.io/badge/arXiv-2402.XXXXX-physics-green.svg)](https://arxiv.org)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📋 Overview
@@ -22,16 +22,19 @@ The theory demonstrates that the discrete geometry is rooted in the tetrahedral 
 
 ## 📁 Repository Structure
 
-
+```text
 ACT-Theory/
-├── codes/
-│   ├── ACT_FINAL_13_02_2025.py      # Main simulation code (L=16)
-│   ├── ACT_OPTIMIZED_LAPTOP.py      # Optimized version for laptops
-│   └── README.md                     # This file
-├── docs/
-│   └── ACT__Финал.pdf                # Full theory paper
-└── results/
-    └── figures/                       # Generated plots
+├── src/
+│   ├── run_experiment2.py      # Core simulation execution
+│   └── scan_phase_hardcore.py  # Phase stability analysis
+├── papers/
+│   └── ACT_Theory_Final.pdf    # Full scientific paper
+├── images/                     # Visual assets for README
+├── results/                    # Output plots and dashboards
+├── LICENSE                     # MIT License
+└── README.md                   # Project documentation
+```
+
 
 
 ## 🚀 Getting Started
