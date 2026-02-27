@@ -24,6 +24,8 @@ The theory demonstrates that the discrete geometry is rooted in the tetrahedral 
 
 ![ACT Dashboard](images/148.png)
 
+Fig 1. ACT Production Dashboard (L=16). The simulation demonstrates the emergence of the fine structure constant $alpha^{-1} approx 137.036$ (top left) and the stable phase plateau (bottom center). The dark matter distribution is consistently calculated at $approx 26.1%$, matching observational cosmological data.
+
 ## 📁 Repository Structure
 
 ```text
