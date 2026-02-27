@@ -1,263 +1,168 @@
-# 🧪 ALGEBRAIC CAUSALITY THEORY (ACT)
+# ACT Theory - Algebraic Causality Theory
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![arXiv](https://img.shields.io/badge/arXiv-2402.XXXXX-b31b1b.svg)](https://arxiv.org)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-
-**A first-principles computational framework for Algebraic Causality Theory - where causality is primary, and space-time, quantum fields, and physical laws emerge from causal hypergraph dynamics.**
-
-![ACT Production Dashboard](docs/images/act_production_dashboard.png)
-*Figure 1: ACT Production Dashboard showing stable results across different lattice sizes*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14789632.svg)](https://doi.org/10.5281/zenodo.14789632)
+[![arXiv](https://img.shields.io/badge/arXiv-2402.XXXXX-physics-green.svg)](https://arxiv.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📋 Overview
 
-Algebraic Causality Theory (ACT) is a candidate Theory of Everything that derives the Standard Model, General Relativity, and cosmological parameters from a single principle: **causality as a primary algebraic structure**. This repository contains the production-grade simulation engine that numerically validates ACT predictions against experimental data.
+**Algebraic Causality Theory (ACT)** is a fundamental theoretical framework where causality—defined as a primary discrete relation—precedes the emergence of spacetime and quantum fields. This repository contains the numerical implementation and simulation codes for the theory presented in the paper:
 
-### 🏆 Key Results (Validated Across Scales)
+> *"Algebraic Causality Theory (ACT): From the Dirac Operator Spectrum to the Nature of Dark Energy, Dark Matter, and Fundamental Constants"* (V.N. Potapov, February 2026)
 
-| Parameter | L=10 Result | L=16 Result | Experimental | Deviation |
-|-----------|-------------|-------------|--------------|-----------|
-| **Fine Structure Constant** α⁻¹ | `137.036 ± 15.11` | `137.036 ± 14.06` | `137.035999084` | **<0.001%** |
-| **Dark Matter Density** ΩDM (raw) | `25.92% ± 0.33%` | `25.96% ± 0.16%` | `26.0%` | **<0.1%** |
-| **Dark Energy Density** ΩDE | `69.12%` | `69.06%` | `68.0%` | **+1.1%** |
-| **Baryon Density** Ωb | `4.97%` | `4.98%` | `~5.0%` | **<0.1%** |
-| **Number of Generations** | `3` | `3` | `3` | **Exact** |
+The theory demonstrates that the discrete geometry is rooted in the tetrahedral structure of a "chronon" (the elementary causal event), with the tetrahedron identified as the minimal 3D simplex required for point self-positioning.
 
-### 🔬 Key Discovery: Phase Stability
+## 🔬 Key Results
 
-The system exhibits **critical stability** at phase φ = 1.3π, where the raw dark matter density converges to **25.92-25.96%** - virtually identical to the cosmological target of 26%!
+- **Three fermion generations** emerge naturally from the topological index ind(D) = ±3 of the Dirac operator
+- **Dark Energy** interpreted as topological modes localized between light cones
+- **Dark Matter** emerges as stable topological defects at octant joints
+- **Fine structure constant** prediction: α⁻¹ = 137.042 ± 0.085 (0.004% accuracy vs. CODATA)
+- **Cosmological densities**: Ω<sub>DM</sub> ≈ 26.0%, Ω<sub>b</sub> ≈ 5.0% (consistent with Planck 2018)
 
-| L | Raw ΩDM | Corrected ΩDM | Significance |
-|---|---------|---------------|--------------|
-| 10 | 25.92% | 25.92% | 0.25σ |
-| 12 | 25.94% | 25.94% | 0.20σ |
-| 14 | ~24.8% | 26.04%* | <1σ |
-| 16 | 25.96% | 29.08%* | 19σ* |
+## 📁 Repository Structure
 
-*\*Note: Correction factor for L=14/16 needs recalibration based on L=10/12 data*
 
-## 🔬 Core Physics
+ACT-Theory/
+├── codes/
+│   ├── ACT_FINAL_13_02_2025.py      # Main simulation code (L=16)
+│   ├── ACT_OPTIMIZED_LAPTOP.py      # Optimized version for laptops
+│   └── README.md                     # This file
+├── docs/
+│   └── ACT__Финал.pdf                # Full theory paper
+└── results/
+    └── figures/                       # Generated plots
 
-### Fundamental Postulates
 
-1. **Primacy of Causality**: The fundamental object is the **chronon** (elementary event)
-2. **Causal Hypergraph**: Chronons are connected by causal relations (τᵢ ≺ τⱼ)
-3. **Emergent Geometry**: Space-time emerges from the topology of the causal network
-4. **Algebraic Structure**: Each chronon lives in a 9-dimensional Hilbert space:
+## 🚀 Getting Started
 
+### Prerequisites
 
-\mathcal{H}_\tau \cong \mathbb{C}^4_+ \otimes \mathbb{C}^4_- \otimes \mathbb{C}
-Where:
 
-    ℂ⁴₊ - Future-directed causal connections (visible matter)
+pip install numpy matplotlib scipy tqdm
 
-    ℂ⁴₋ - Past-directed memory (dark matter)
 
-    ℂ - Scalar order parameter (Higgs field)
+### Quick Run
 
-Key Mathematical Relations
 
-Fine Structure Constant:
-\alpha^{-1} = \frac{\text{Tr}(D^2)}{8\pi^2} \cdot \frac{\text{ind}(D)}{3} \cdot \frac{M_{\text{Planck}}}{m_e} \cdot C = 137.036
+# Clone repository
+git clone https://github.com/Slava2201/ACT-Theory.git
+cd ACT-Theory/codes
 
-Dark Matter Density:
-\Omega_{\text{DM}} \approx \frac{1}{\sqrt{\alpha}} \cdot \Omega_\Lambda
+# Run optimized version (recommended for laptops)
+python ACT_OPTIMIZED_LAPTOP.py
 
-Topological Index (Number of Generations):
-\text{ind}(D) = n_+ - n_- = 3
+# Run full simulation (L=16, requires more memory)
+python ACT_FINAL_13_02_2025.py
 
-🚀 Production Engine Features
-Scalable Performance
 
-    Lattice sizes: L=8 (512 nodes) to L=16 (4,096 nodes) per octant
+## 💻 Code Description
 
-    Total chronons: Up to 32,768 in full simulation
+### ACT_FINAL_13_02_2025.py
 
-    Eigenvalues: 150-300 per octant for optimal statistics
+The main implementation with full resolution (L=16, 32,768 chronons, 2,400 energy modes). Features:
 
-    Memory-efficient: Sparse matrices, HDF5 caching, automatic garbage collection
+- Tetrahedral chronon structure with Cℓ(4) algebra
+- Dirac operator spectrum calculation
+- Dark energy density computation from topological modes
+- Dark matter defect network simulation
+- RG flow integration for fine structure constant
 
-Advanced Algorithms
+### ACT_OPTIMIZED_LAPTOP.py
 
-    LOBPCG for large-scale eigenvalue problems
+Lightweight version optimized for personal computers with adaptive resolution and memory-efficient algorithms.
 
-    Bootstrap error estimation (1000+ resamples)
+## 📊 Key Predictions
 
-    Adaptive threshold detection based on cosmological fractions
+| Parameter | ACT Value | Observed Value | Accuracy |
+|-----------|-----------|----------------|----------|
+| α⁻¹ | 137.042 ± 0.085 | 137.036 | 0.004% |
+| Ω<sub>DM</sub>h² | 0.119 | 0.120 ± 0.001 | <1% |
+| ρ<sub>Λ</sub> | 2.75 × 10⁻¹¹ eV⁴ | (2.80 ± 0.1) × 10⁻¹¹ eV⁴ | <2% |
+| w (DE) | -1.02 ± 0.02 | -1.03 ± 0.03 | Consistent |
+| Generations | 3 | 3 | Exact |
 
-    Phase-locked stability at φ = 1.3π
+## 🔧 Mathematical Foundation
 
-Physical Observables
+The core equation governing the Dirac operator in octant structure:
 
-    ✅ Fine structure constant α⁻¹
+```python
+# From Section 1 of paper
+D_i = γ^μ ∇_μ^(i) + m_i
+∇_μ^(i) = ∂_μ + ig_i A_μ^a T^a + Γ_μ
+```
 
-    ✅ Dark matter density ΩDM (raw and corrected)
+The fine structure constant emerges from the topological stabilization:
 
-    ✅ Dark energy density ΩΛ
+```python
+ind(D) = Σ_i ind_i + (1/2π) Σ_{⟨ij⟩} ∮_{Γ_ij} A_defect
+```
 
-    ✅ Baryon density Ωb
+## 🌌 Physical Interpretation
 
-    ✅ Topological indices (generation count = 3)
+- **Chronon τ**: Elementary causal event in 9D complex Hilbert space ℋ_τ ≅ ℂ⁴₊ ⊗ ℂ⁴₋ ⊗ ℂ
+- **Octant structure**: 8-fold decomposition of spacetime from tetrahedral dual embedding
+- **Topological modes**: Solutions of DΨ_top = 0 with nontrivial boundary conditions
+- **Dark matter defects**: Chern-Simons action on (2+1)-D boundaries: S_CS = (k/4π)∫ Tr(A∧dA + ⅔ A∧A∧A)
 
-📦 Installation
-# Clone the repository
-git clone https://github.com/yourusername/ACT-Theory.git
-cd ACT-Theory
+## 📈 Running Simulations
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### Basic parameters
+- L = 8-16 (network size)
+- Energy modes: 600-2400
+- Phase scan: φ ∈ [0, 2π]
 
-# Install dependencies
-pip install -r requirements.txt
+### Output
+- Energy spectrum plots (generation peaks)
+- α⁻¹ convergence history
+- Cosmological budget (Ω_DM, Ω_Λ, Ω_b)
+- Phase stability diagrams
 
-Requirements
-numpy>=1.21.0
-scipy>=1.7.0
-matplotlib>=3.4.0
-h5py>=3.2.0
-tqdm>=4.62.0
-psutil>=5.8.0
-pandas>=1.3.0
+## 🔍 Experimental Tests
 
-💻 Usage
-Quick Start (L=10 for testing)
+The theory makes falsifiable predictions:
 
-from act_production import ACT_ProductionEngine
+1. **Dark energy anisotropies**: δρ_Λ/ρ_Λ ∼ 10⁻⁵
+2. **Vacuum oscillations**: f ∼ 10⁻¹⁸ - 10⁻¹⁶ Hz
+3. **Large-scale structure**: Characteristic correlation scale ∼ 100 Mpc
+4. **α(z) evolution**: Predictable RG flow with redshift
 
-# Initialize engine
-engine = ACT_ProductionEngine(L=10, k=150, stable_phase=1.3)
+## 📚 Citation
 
-# Run simulation
-results = engine.run_production()
+If you use this code or refer to the theory, please cite:
 
-# View results
-print(f"α⁻¹ = {results['alpha']['alpha']:.3f} ± {results['alpha']['alpha_error']:.3f}")
-print(f"Raw ΩDM = {results['dark_matter']['dm_raw']:.2f}%")
-print(f"Calibrated ΩDM = {results['dark_matter']['dm_corrected']:.2f}% ± {results['dark_matter']['dm_error']:.2f}%")
 
-Production Run (Auto-selects based on RAM)
-
-from act_production import run_production_auto
-
-results = run_production_auto()
-
-Command Line Interface
-# Run with specific parameters
-python act_production.py --L 12 --k 200 --phase 1.3
-
-# Run with maximum available resources
-python act_production.py --max --phase 1.3
-
-📊 Output Structure
-ACT_Production_L10/
-├── ACT_Production_L10.json          # Complete results
-├── ACT_Production_L10.png            # Dashboard visualization
-└── ACT_Cache_L10/                    # HDF5 cache
-    ├── octant_0_prod.h5
-    ├── octant_1_prod.h5
-    └── ...
-
-    🔍 Validation Results
-Lattice Size Convergence
-L	Nodes/Octant	Raw ΩDM	Error	σ
-8	512	~13-17%	±2.0%	>10σ
-10	1,000	25.92%	±0.33%	0.25σ
-12	1,728	25.94%	±0.28%	0.20σ
-14	2,744	~24.8%*	±0.20%*	<1σ*
-16	4,096	25.96%	±0.16%	0.15σ
-
-*Projected values based on trend
-Critical Phase Discovery
-
-The system shows remarkable stability at φ = 1.3π:
-
-    L=10: 25.92% DM (σ=0.25)
-
-    L=12: 25.94% DM (σ=0.20)
-
-    L=16: 25.96% DM (σ=0.15)
-
-This demonstrates scale invariance of the raw dark matter fraction!
-🧪 Theoretical Implications
-
-    Dark Matter as Memory: The ℂ⁴₋ subspace acts as "gravitational memory" - information about past causal connections
-
-    Phase Locking: The critical phase φ = 1.3π represents a fixed point of the renormalization group flow
-
-    Scale Invariance: Raw DM fraction converges to 26% independent of L, confirming the theory's consistency
-
-📈 Performance Benchmarks
-L	RAM	Runtime	Modes	DM Error
-10	4 GB	1 min	1,200	±0.33%
-12	8 GB	3 min	1,600	±0.28%
-14	16 GB	10 min	2,000	±0.20%*
-16	32 GB	30 min	2,400	±0.16%
-🤝 Contributing
-
-We welcome contributions! Areas needing development:
-
-    GPU acceleration for eigenvalue solvers
-
-    Analytical derivation of L-correction formula
-
-    Connection to loop quantum gravity
-
-    Experimental signature predictions
-
-    Web-based interactive dashboard
-
-Please see CONTRIBUTING.md for guidelines.
-📚 Citation
-
-If you use this code in your research, please cite:
-@article{Potapov2026ACT,
-  title={Algebraic Causality Theory: From Dirac Operator Spectrum to Dark Matter and Fundamental Constants},
+@article{potapov2026algebraic,
+  title={Algebraic Causality Theory (ACT): From the Dirac Operator Spectrum 
+         to the Nature of Dark Energy, Dark Matter, and Fundamental Constants},
   author={Potapov, V.N.},
   journal={arXiv preprint},
   year={2026},
-  volume={2402.XXXXX}
+  note={Code available: https://github.com/Slava2201/ACT-Theory}
 }
 
-📖 References
 
-    Planck Collaboration (2025). Planck 2025 results: Cosmological parameters
+## 🤝 Acknowledgments
 
-    CODATA (2022). Recommended values of the fundamental physical constants
+The author expresses deep gratitude to:
+- **Maksim Dmitrievich Fitkevich** (MIPT) — for invaluable mentorship and the search for the nonlocality operator
+- **Aleksei Nikolaevich Prots** (FTF KubSU) — for contributions to the mathematical apparatus and RG analysis
+- **Mikhail Yurievich Fedunov** (BNTU) — for uncompromising criticism
+- **Yuri Sergeevich Sautenkin** (PTK) — for genuine curiosity
+- **Evgeny Vyacheslavovich Potapov** — for endless faith and support
 
-    Atiyah, M.F., Singer, I.M. (1983). The index of elliptic operators on compact manifolds
+## 📄 License
 
-    Potapov, V.N. (2026). Algebraic Causality Theory: A Unified Framework (in press)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-📬 Contact
+## 📬 Contact
 
-    Author: V.N. Potapov
+For questions, collaborations, or implementing experimental tests:
+- Open an issue on GitHub
+- Contact author via institutional email
 
-    Email: email@example.com
+---
 
-    GitHub Issues: For bugs and feature requests
+**Keywords**: Algebraic Causality Theory, Dirac operator, fine structure constant, dark energy, dark matter, fermion generations, causal hypergraph, chronon, topological defects, quantum gravity
 
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-🙏 Acknowledgments
-
-The author gratefully acknowledges:
-
-    Maksim Dmitrievich Fitkevich (MIPT) - for insistence on mathematical rigor
-
-    Alexey Nikolaevich Prots (KubSU) - for guidance on Clifford algebras and RG flow
-
-    Mikhail Yurievich Fedunov (BNTU) - for critical analysis of physical constants
-
-    Yuri Sergeevich Sautenkin - for engagement with quantum mechanics
-
-    Evgeniy Vyacheslavovich Potapov - for unwavering support
-
-Technical support: DeepSeek (neural network model), MIA (iMe AI) for LaTeX formatting.
-🎯 Key Takeaway
-
-    "At scale, the raw dark matter fraction converges to 25.96% - virtually indistinguishable from the cosmological target of 26%. The theory is not just consistent; it's predictive."
-
-<p align="center"> <strong>From causality to cosmos - one equation at a time.</strong> </p> ```
+*"The fine-tuning of α to its precise value is a result of the combined topological stabilization from volume modes (generations) and boundary defects (dark matter)."* — V.N. Potapov, 2026
