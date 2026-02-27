@@ -20,6 +20,10 @@ The theory demonstrates that the discrete geometry is rooted in the tetrahedral 
 - **Fine structure constant** prediction: α⁻¹ = 137.042 ± 0.085 (0.004% accuracy vs. CODATA)
 - **Cosmological densities**: Ω<sub>DM</sub> ≈ 26.0%, Ω<sub>b</sub> ≈ 5.0% (consistent with Planck 2018)
 
+![ACT Dashboard](images/147.png)
+
+![ACT Dashboard](images/148.png)
+
 ## 📁 Repository Structure
 
 ```text
