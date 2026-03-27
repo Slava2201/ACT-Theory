@@ -142,7 +142,7 @@ If you use this work or code in your research, please cite:
 
 **Potapov, V.N. (2026).** *Algebraic Causality Theory (ACT): From the Dirac Operator Spectrum to the Nature of Dark Energy, Dark Matter, and Fundamental Constants.* 
 
-- **Full Paper:** [Available in /papers](./papers) or on [Zenodo (DOI: 10.5281/zenodo.XXXXX)](https://doi.org/10.5281/zenodo.XXXXX)
+- **Full Paper:** [Available in /papers](./papers) or on [Zenodo (DOI: 10.5281/zenodo.XXXXX)](https://zenodo.org/badge/DOI/10.5281/zenodo.19255023.svg)](https://doi.org/10.5281/zenodo.19255023)
 - **Source Code:** [GitHub Repository](https://github.com/Slava2201/ACT-Theory/tree/main/src)
 
 
