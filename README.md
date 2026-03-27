@@ -136,19 +136,15 @@ The theory makes falsifiable predictions:
 3. **Large-scale structure**: Characteristic correlation scale ∼ 100 Mpc
 4. **α(z) evolution**: Predictable RG flow with redshift
 
-## 📚 Citation
+### Citation
+If you use this work or code in your research, please cite:
 
-If you use this code or refer to the theory, please cite:
+**Potapov, V.N. (2026).** *Algebraic Causality Theory (ACT): From the Dirac Operator Spectrum to the Nature of Dark Energy, Dark Matter, and Fundamental Constants.* 
+
+- **Full Paper:** [Available in /papers](./papers) or on [Zenodo (DOI: 10.5281/zenodo.XXXXX)](https://doi.org/10.5281/zenodo.XXXXX)
+- **Source Code:** [GitHub Repository](https://github.com/Slava2201/ACT-Theory/tree/main/src)
 
 
-@article{potapov2026algebraic,
-  title={Algebraic Causality Theory (ACT): From the Dirac Operator Spectrum 
-         to the Nature of Dark Energy, Dark Matter, and Fundamental Constants},
-  author={Potapov, V.N.},
-  The full paper is available in the `/papers` directory of this repository and on Zenodo: [DOI-link],
-  year={2026},
-  note={Code available: https://github.com/Slava2201/ACT-Theory/tree/main/src}
-}
 
 
 ## 🤝 Acknowledgments
