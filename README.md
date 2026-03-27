@@ -1,6 +1,6 @@
 # ACT Theory - Algebraic Causality Theory
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.14789632-blue)](https://doi.org/10.5281/zenodo.14789632)
+[![DOI](https://img.shields.io/badge/DOI-pending-yellow)]
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
