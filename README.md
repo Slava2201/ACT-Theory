@@ -106,10 +106,10 @@ $$ind(D) = \sum_i ind_i + \frac{1}{2\pi} \sum_{\{ij\}} \oint_{\Gamma_{ij}} A_{de
 
 ## 🌌 Physical Interpretation
 
-- **Chronon τ**: Elementary causal event in 9D complex Hilbert space ℋ_τ ≅ ℂ⁴₊ ⊗ ℂ⁴₋ ⊗ ℂ
+- **Chronon τ**: Elementary causal event in 9D complex Hilbert space $ℋ_τ ≅ ℂ⁴_+ ⊗ ℂ⁴_- ⊗ ℂ$
 - **Octant structure**: 8-fold decomposition of spacetime from tetrahedral dual embedding
 - **Topological modes**: Solutions of DΨ_top = 0 with nontrivial boundary conditions
-- **Dark matter defects**: Chern-Simons action on (2+1)-D boundaries: S_CS = (k/4π)∫ Tr(A∧dA + ⅔ A∧A∧A)
+- **Dark matter defects**: Chern-Simons action on (2+1)-D boundaries: $S_{CS} = (k/4π)∫ Tr(A∧dA + ⅔ A∧A∧A)$
 
 ## 📈 Running Simulations
 
@@ -121,14 +121,14 @@ $$ind(D) = \sum_i ind_i + \frac{1}{2\pi} \sum_{\{ij\}} \oint_{\Gamma_{ij}} A_{de
 ### Output
 - Energy spectrum plots (generation peaks)
 - α⁻¹ convergence history
-- Cosmological budget (Ω_DM, Ω_Λ, Ω_b)
+- Cosmological budget $(Ω_{DM}, Ω_Λ, Ω_b)$
 - Phase stability diagrams
 
 ## 🔍 Experimental Tests
 
 The theory makes falsifiable predictions:
 
-1. **Dark energy anisotropies**: δρ_Λ/ρ_Λ ∼ 10⁻⁵
+1. **Dark energy anisotropies**: $δρ_Λ/ρ_Λ ∼ 10^{-5}$
 2. **Vacuum oscillations**: f ∼ 10⁻¹⁸ - 10⁻¹⁶ Hz
 3. **Large-scale structure**: Characteristic correlation scale ∼ 100 Mpc
 4. **α(z) evolution**: Predictable RG flow with redshift
