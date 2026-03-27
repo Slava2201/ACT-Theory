@@ -147,7 +147,7 @@ If you use this code or refer to the theory, please cite:
   author={Potapov, V.N.},
   The full paper is available in the `/papers` directory of this repository and on Zenodo: [DOI-link],
   year={2026},
-  note={Code available: git clone https://github.com/Slava2201/ACT-Theory.git}
+  note={Code available: https://github.com/Slava2201/ACT-Theory/tree/main/src}
 }
 
 
