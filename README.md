@@ -63,7 +63,7 @@ cd ACT-Theory/codes
 [run_experiment2.py](https://github.com/Slava2201/ACT-Theory/blob/main/src/run_experiment2.py)
 
 # Run full simulation (L=16, requires more memory)
-[scan_phase_hardcore.py](https://github.com/Slava2201/ACT-Theory/git/blob/main/scan_phase_hardcore.py)
+[scan_phase_hardcore.py](https://github.com/Slava2201/ACT-Theory/blob/main/src/scan_phase_hardcore.py)
 
 
 
