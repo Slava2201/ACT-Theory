@@ -60,10 +60,11 @@ git clone https://github.com/Slava2201/ACT-Theory.git
 cd ACT-Theory/codes
 
 # Run optimized version (recommended for laptops)
-run_experiment2.py
+[run_experiment2.py](./run_experiment2.py)
 
 # Run full simulation (L=16, requires more memory)
-scan_phase_hardcore.py
+[scan_phase_hardcore.py](./scan_phase_hardcore.py)
+
 
 
 ## 💻 Code Description
